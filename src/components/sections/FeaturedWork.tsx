@@ -8,7 +8,7 @@ const projects = [
     type: "Brand Identity",
     year: "2024",
     image: "/projects/rishaba.png",
-    wide: true,
+    bg: "#f0ddc7",
   },
   {
     num: "02",
@@ -16,7 +16,7 @@ const projects = [
     type: "Brand Identity",
     year: "2024",
     image: "/projects/kinderlogica.png",
-    wide: false,
+    bg: "#9ee2d2",
   },
   {
     num: "03",
@@ -24,7 +24,7 @@ const projects = [
     type: "Brand Identity",
     year: "2023",
     image: "/projects/mustang.png",
-    wide: false,
+    bg: "#ffefd6",
   },
   {
     num: "04",
@@ -32,7 +32,7 @@ const projects = [
     type: "Brand & Web",
     year: "2024",
     image: "/projects/megasoft.png",
-    wide: true,
+    bg: "#f0ddc7",
   },
   {
     num: "05",
@@ -40,7 +40,7 @@ const projects = [
     type: "Brand Identity",
     year: "2023",
     image: "/projects/indu.png",
-    wide: false,
+    bg: "#e4caca",
   },
   {
     num: "06",
@@ -48,22 +48,25 @@ const projects = [
     type: "Brand Identity",
     year: "2023",
     image: "/projects/sarang.png",
-    wide: false,
+    bg: "#ffefd6",
   },
 ];
 
 export default function FeaturedWork() {
   return (
-    <section className="px-6 xl:px-10 pt-24 pb-32" style={{ borderTop: "1px solid rgba(12,12,12,0.1)" }}>
+    <section className="px-6 xl:px-10 pt-24 pb-32" style={{ borderTop: "1px solid rgba(45,46,56,0.1)" }}>
 
       {/* Header */}
       <div className="flex items-center justify-between mb-16">
-        <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-[rgba(12,12,12,0.4)]">
+        <h2
+          className="font-display font-black uppercase tracking-wide text-[#fa9173]"
+          style={{ fontSize: "clamp(11px, 1vw, 13px)", letterSpacing: "0.2em", fontFamily: "var(--font-display), 'Barlow Condensed', Arial, sans-serif" }}
+        >
           Selected Work
         </h2>
         <Link
           href="/work"
-          className="text-xs font-semibold uppercase tracking-[0.2em] text-[rgba(12,12,12,0.4)] hover:text-[#0c0c0c] transition-colors"
+          className="text-xs font-medium uppercase tracking-[0.2em] text-[rgba(45,46,56,0.4)] hover:text-[#2d2e38] transition-colors"
         >
           All projects →
         </Link>
@@ -72,7 +75,7 @@ export default function FeaturedWork() {
       {/* Row 1: two projects side by side, 60/40 split */}
       <div className="grid grid-cols-1 md:grid-cols-5 gap-3 mb-3">
         <Link href="/work" className="group md:col-span-3 block">
-          <div className="relative aspect-[4/3] overflow-hidden bg-[#e8e5df]">
+          <div className="relative aspect-[4/3] overflow-hidden" style={{ background: projects[0].bg }}>
             <Image
               src={projects[0].image}
               alt={projects[0].title}
@@ -83,15 +86,15 @@ export default function FeaturedWork() {
           </div>
           <div className="flex items-start justify-between pt-4">
             <div>
-              <p className="text-[rgba(12,12,12,0.35)] text-xs mb-1">{projects[0].num}</p>
-              <p className="text-[#0c0c0c] text-lg font-semibold">{projects[0].title}</p>
+              <p className="text-[rgba(45,46,56,0.3)] text-xs mb-1">{projects[0].num}</p>
+              <p className="text-[#2d2e38] text-lg font-semibold" style={{ fontFamily: "var(--font-serif), 'IBM Plex Serif', Georgia, serif" }}>{projects[0].title}</p>
             </div>
-            <span className="text-[rgba(12,12,12,0.4)] text-xs mt-1">{projects[0].type}</span>
+            <span className="text-[rgba(45,46,56,0.4)] text-xs mt-1">{projects[0].type}</span>
           </div>
         </Link>
 
         <Link href="/work" className="group md:col-span-2 block">
-          <div className="relative aspect-[4/3] overflow-hidden bg-[#e8e5df]">
+          <div className="relative aspect-[4/3] overflow-hidden" style={{ background: projects[1].bg }}>
             <Image
               src={projects[1].image}
               alt={projects[1].title}
@@ -102,10 +105,10 @@ export default function FeaturedWork() {
           </div>
           <div className="flex items-start justify-between pt-4">
             <div>
-              <p className="text-[rgba(12,12,12,0.35)] text-xs mb-1">{projects[1].num}</p>
-              <p className="text-[#0c0c0c] text-lg font-semibold">{projects[1].title}</p>
+              <p className="text-[rgba(45,46,56,0.3)] text-xs mb-1">{projects[1].num}</p>
+              <p className="text-[#2d2e38] text-lg font-semibold" style={{ fontFamily: "var(--font-serif), 'IBM Plex Serif', Georgia, serif" }}>{projects[1].title}</p>
             </div>
-            <span className="text-[rgba(12,12,12,0.4)] text-xs mt-1">{projects[1].type}</span>
+            <span className="text-[rgba(45,46,56,0.4)] text-xs mt-1">{projects[1].type}</span>
           </div>
         </Link>
       </div>
@@ -114,7 +117,7 @@ export default function FeaturedWork() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-3">
         {projects.slice(2, 5).map((p) => (
           <Link key={p.title} href="/work" className="group block">
-            <div className="relative aspect-[4/3] overflow-hidden bg-[#e8e5df]">
+            <div className="relative aspect-[4/3] overflow-hidden" style={{ background: p.bg }}>
               <Image
                 src={p.image}
                 alt={p.title}
@@ -125,19 +128,19 @@ export default function FeaturedWork() {
             </div>
             <div className="flex items-start justify-between pt-4">
               <div>
-                <p className="text-[rgba(12,12,12,0.35)] text-xs mb-1">{p.num}</p>
-                <p className="text-[#0c0c0c] text-lg font-semibold">{p.title}</p>
+                <p className="text-[rgba(45,46,56,0.3)] text-xs mb-1">{p.num}</p>
+                <p className="text-[#2d2e38] text-lg font-semibold" style={{ fontFamily: "var(--font-serif), 'IBM Plex Serif', Georgia, serif" }}>{p.title}</p>
               </div>
-              <span className="text-[rgba(12,12,12,0.4)] text-xs mt-1">{p.type}</span>
+              <span className="text-[rgba(45,46,56,0.4)] text-xs mt-1">{p.type}</span>
             </div>
           </Link>
         ))}
       </div>
 
-      {/* Row 3: one wide */}
+      {/* Row 3: one wide + CTA card */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
         <Link href="/work" className="group block">
-          <div className="relative aspect-[16/9] overflow-hidden bg-[#e8e5df]">
+          <div className="relative aspect-[16/9] overflow-hidden" style={{ background: projects[5].bg }}>
             <Image
               src={projects[5].image}
               alt={projects[5].title}
@@ -148,20 +151,25 @@ export default function FeaturedWork() {
           </div>
           <div className="flex items-start justify-between pt-4">
             <div>
-              <p className="text-[rgba(12,12,12,0.35)] text-xs mb-1">{projects[5].num}</p>
-              <p className="text-[#0c0c0c] text-lg font-semibold">{projects[5].title}</p>
+              <p className="text-[rgba(45,46,56,0.3)] text-xs mb-1">{projects[5].num}</p>
+              <p className="text-[#2d2e38] text-lg font-semibold" style={{ fontFamily: "var(--font-serif), 'IBM Plex Serif', Georgia, serif" }}>{projects[5].title}</p>
             </div>
-            <span className="text-[rgba(12,12,12,0.4)] text-xs mt-1">{projects[5].type}</span>
+            <span className="text-[rgba(45,46,56,0.4)] text-xs mt-1">{projects[5].type}</span>
           </div>
         </Link>
         {/* CTA card */}
         <Link
           href="/work"
-          className="group flex items-center justify-center border border-[rgba(12,12,12,0.08)] hover:border-[rgba(12,12,12,0.25)] transition-colors aspect-[16/9]"
+          className="group flex items-center justify-center border border-[rgba(45,46,56,0.1)] hover:border-[rgba(45,46,56,0.3)] transition-colors aspect-[16/9]"
         >
           <div className="text-center">
-            <p className="text-[rgba(12,12,12,0.35)] text-sm mb-3 group-hover:text-[rgba(12,12,12,0.6)] transition-colors">See all projects</p>
-            <p className="text-[#0c0c0c] text-3xl font-bold group-hover:opacity-70 transition-opacity">50+ →</p>
+            <p className="text-[rgba(45,46,56,0.35)] text-sm mb-3 group-hover:text-[rgba(45,46,56,0.6)] transition-colors">See all projects</p>
+            <p
+              className="font-display font-black uppercase text-[#2d2e38] group-hover:text-[#fa9173] transition-colors"
+              style={{ fontSize: "clamp(40px, 5vw, 72px)", fontFamily: "var(--font-display), 'Barlow Condensed', Arial, sans-serif" }}
+            >
+              50+ →
+            </p>
           </div>
         </Link>
       </div>

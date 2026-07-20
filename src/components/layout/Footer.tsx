@@ -23,12 +23,12 @@ const products = [
   { label: "Groomré", href: "/products/groomre" },
 ];
 
-const muted = "rgba(12,12,12,0.35)";
-const dim = "rgba(12,12,12,0.18)";
+const muted = "rgba(45,46,56,0.45)";
+const dim = "rgba(45,46,56,0.25)";
 
 export default function Footer() {
   return (
-    <footer style={{ background: "#f4f1eb", borderTop: "1px solid rgba(12,12,12,0.1)" }}>
+    <footer style={{ background: "#fffef9", borderTop: "1px solid rgba(45,46,56,0.1)" }}>
       <div className="px-6 xl:px-10 py-16 md:py-24">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
           <div className="lg:col-span-2">
@@ -40,11 +40,11 @@ export default function Footer() {
             </p>
             <div className="mt-8 space-y-4">
               <div>
-                <p className="text-xs font-bold uppercase tracking-widest text-[#0c0c0c] mb-1">Bengaluru</p>
+                <p className="text-xs font-bold uppercase tracking-widest text-[#2d2e38] mb-1">Bengaluru</p>
                 <p className="text-xs leading-relaxed" style={{ color: muted }}>Awfis, Vajram Esteva, Devarabisanahalli,<br />Bellandur — 560103, Karnataka</p>
               </div>
               <div>
-                <p className="text-xs font-bold uppercase tracking-widest text-[#0c0c0c] mb-1">Nashik</p>
+                <p className="text-xs font-bold uppercase tracking-widest text-[#2d2e38] mb-1">Nashik</p>
                 <p className="text-xs leading-relaxed" style={{ color: muted }}>1, Janaki, Architect Colony,<br />Gangapur Road — 422013, Maharashtra</p>
               </div>
             </div>

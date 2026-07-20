@@ -1,17 +1,22 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f4f1eb;
-  --foreground: #0c0c0c;
-  --muted: rgba(12,12,12,0.45);
-  --border: rgba(12,12,12,0.1);
-  --card: #141414;
+  --background: #fffef9;
+  --foreground: #2d2e38;
+  --muted: rgba(45,46,56,0.45);
+  --border: rgba(45,46,56,0.12);
+  --accent: #fa9173;
+  --purple: #323462;
+  --almond: #f0ddc7;
+  --cream: #ffefd6;
+  --green: #9ee2d2;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-jakarta);
+  --font-sans: var(--font-serif);
+  --font-display: var(--font-display);
 }
 
 * { box-sizing: border-box; }
@@ -20,9 +25,13 @@ html { scroll-behavior: auto; }
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-jakarta), "Plus Jakarta Sans", -apple-system, sans-serif;
+  font-family: var(--font-serif), "IBM Plex Serif", Georgia, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.font-display {
+  font-family: var(--font-display), "Barlow Condensed", Arial, sans-serif;
 }
 
 ::selection { background: var(--foreground); color: var(--background); }
@@ -35,7 +44,7 @@ body {
 #cursor-dot {
   position: fixed; top: 0; left: 0;
   width: 5px; height: 5px;
-  background: #0c0c0c;
+  background: #2d2e38;
   border-radius: 50%;
   pointer-events: none; z-index: 9999;
   will-change: transform;
@@ -43,14 +52,14 @@ body {
 #cursor-ring {
   position: fixed; top: 0; left: 0;
   width: 34px; height: 34px;
-  border: 1px solid rgba(12,12,12,0.5);
+  border: 1px solid rgba(45,46,56,0.5);
   border-radius: 50%;
   pointer-events: none; z-index: 9998;
   will-change: transform;
   transition: width .3s ease, height .3s ease, opacity .3s ease;
 }
 #cursor-dot.hovering { width: 8px; height: 8px; }
-#cursor-ring.hovering { width: 52px; height: 52px; border-color: rgba(12,12,12,0.8); }
+#cursor-ring.hovering { width: 52px; height: 52px; border-color: rgba(45,46,56,0.8); }
 
 /* ── Page entry ──────────────────────────────────────────────── */
 @keyframes page-in {
@@ -99,8 +108,8 @@ body {
 .animate-marquee:hover { animation-play-state: paused; }
 
 /* ── Footer link ─────────────────────────────────────────────── */
-.footer-link { color: rgba(12,12,12,0.35); transition: color .3s ease; }
-.footer-link:hover { color: #0c0c0c; }
+.footer-link { color: rgba(45,46,56,0.4); transition: color .3s ease; }
+.footer-link:hover { color: #2d2e38; }
 
 /* ── Image hover ─────────────────────────────────────────────── */
 .img-scale img,

@@ -95,9 +95,9 @@ export default function Navbar() {
           ? "backdrop-blur-sm"
           : "bg-transparent"
       }`}
-      style={scrolled || servicesOpen ? { background: "rgba(244,241,235,0.94)" } : {}}
+      style={scrolled || servicesOpen ? { background: "rgba(255,254,249,0.94)" } : {}}
     >
-      <nav className="px-6 xl:px-10 flex items-center h-16 md:h-20">
+      <nav className="px-6 xl:px-10 flex items-center h-20 md:h-[104px]">
 
         {/* Logo — left */}
         <Link href="/" className="flex items-center shrink-0">
@@ -111,7 +111,7 @@ export default function Navbar() {
             <button
               onMouseEnter={() => setServicesOpen(true)}
               onClick={() => setServicesOpen(!servicesOpen)}
-              className={`nav-link flex items-center gap-1 text-[20px] font-medium text-[#0c0c0c] ${
+              className={`nav-link flex items-center gap-1 text-[20px] font-medium text-[#2d2e38] ${
                 isServicesActive || servicesOpen ? "active" : ""
               }`}
             >
@@ -121,18 +121,18 @@ export default function Navbar() {
             {servicesOpen && (
               <div
                 onMouseLeave={() => setServicesOpen(false)}
-                className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[860px] border border-[rgba(12,12,12,0.1)] rounded-sm p-8 grid grid-cols-4 gap-8"
-              style={{ background: "#ece9e2" }}
+                className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[860px] border border-[rgba(45,46,56,0.1)] rounded-sm p-8 grid grid-cols-4 gap-8"
+              style={{ background: "#fffef9" }}
               >
                 {Object.entries(services).map(([vertical, data]) => (
                   <div key={vertical}>
-                    <Link href={data.href} className="block text-xs font-bold uppercase tracking-widest text-[#0c0c0c] mb-4">
+                    <Link href={data.href} className="block text-xs font-bold uppercase tracking-widest text-[#2d2e38] mb-4">
                       {vertical}
                     </Link>
                     <ul className="space-y-2.5">
                       {data.items.map((item) => (
                         <li key={`${vertical}-${item.label}`}>
-                          <Link href={item.href} className="text-sm text-[rgba(12,12,12,0.45)] hover:text-[#0c0c0c] transition-colors leading-snug block">
+                          <Link href={item.href} className="text-sm text-[rgba(45,46,56,0.45)] hover:text-[#2d2e38] transition-colors leading-snug block">
                             {item.label}
                           </Link>
                         </li>
@@ -140,9 +140,9 @@ export default function Navbar() {
                     </ul>
                   </div>
                 ))}
-                <div className="col-span-4 pt-6 mt-2 flex items-center justify-between" style={{ borderTop: "1px solid rgba(12,12,12,0.1)" }}>
-                  <p className="text-xs text-[rgba(12,12,12,0.35)]">Not sure where to start?</p>
-                  <Link href="/contact" className="text-xs font-semibold text-[#0c0c0c]">Talk to us →</Link>
+                <div className="col-span-4 pt-6 mt-2 flex items-center justify-between" style={{ borderTop: "1px solid rgba(45,46,56,0.1)" }}>
+                  <p className="text-xs text-[rgba(45,46,56,0.35)]">Not sure where to start?</p>
+                  <Link href="/contact" className="text-xs font-semibold text-[#2d2e38]">Talk to us →</Link>
                 </div>
               </div>
             )}
@@ -152,7 +152,7 @@ export default function Navbar() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className={`nav-link text-[20px] font-medium text-[#0c0c0c] ${pathname === link.href ? "active" : ""}`}
+                className={`nav-link text-[20px] font-medium text-[#2d2e38] ${pathname === link.href ? "active" : ""}`}
               >
                 {link.label}
               </Link>
@@ -164,7 +164,8 @@ export default function Navbar() {
         <div className="hidden md:flex items-center shrink-0">
           <Link
             href="/contact"
-            className="text-[20px] font-medium text-[#0c0c0c] hover:opacity-60 transition-opacity"
+            className="text-sm font-semibold text-[#fffef9] bg-[#fa9173] px-6 py-2.5 hover:opacity-90 transition-opacity"
+            style={{ borderRadius: "50px" }}
           >
             Let&apos;s Talk
           </Link>
@@ -173,7 +174,7 @@ export default function Navbar() {
         {/* Mobile toggle */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden p-2 text-[#0c0c0c]"
+          className="md:hidden p-2 text-[#2d2e38]"
           aria-label="Toggle menu"
         >
           {menuOpen ? <X size={22} /> : <Menu size={22} />}
@@ -182,12 +183,12 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden px-6 pb-6 pt-4" style={{ background: "#ece9e2", borderTop: "1px solid rgba(12,12,12,0.1)" }}>
+        <div className="md:hidden px-6 pb-6 pt-4" style={{ background: "#323462", borderTop: "1px solid rgba(255,239,214,0.15)" }}>
           <ul className="flex flex-col gap-1">
             <li>
               <button
                 onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-                className="w-full flex items-center justify-between text-base font-medium py-2 text-[#0c0c0c]"
+                className="w-full flex items-center justify-between text-base font-medium py-2 text-[#ffefd6]"
               >
                 Services
               </button>
@@ -195,13 +196,13 @@ export default function Navbar() {
                 <div className="ml-4 mb-2 space-y-4">
                   {Object.entries(services).map(([vertical, data]) => (
                     <div key={vertical}>
-                      <Link href={data.href} className="block text-xs font-bold uppercase tracking-widest text-[#0c0c0c] mb-2">
+                      <Link href={data.href} className="block text-xs font-bold uppercase tracking-widest text-[#2d2e38] mb-2">
                         {vertical}
                       </Link>
                       <ul className="space-y-1.5">
                         {data.items.map((item) => (
                           <li key={`mob-${vertical}-${item.label}`}>
-                            <Link href={item.href} className="text-sm text-[rgba(12,12,12,0.45)] hover:text-[#0c0c0c] transition-colors block py-0.5">
+                            <Link href={item.href} className="text-sm text-[rgba(45,46,56,0.45)] hover:text-[#2d2e38] transition-colors block py-0.5">
                               {item.label}
                             </Link>
                           </li>
@@ -214,13 +215,13 @@ export default function Navbar() {
             </li>
             {navLinks.map((link) => (
               <li key={link.href}>
-                <Link href={link.href} className="block text-base font-medium py-2 text-[#0c0c0c] hover:text-[rgba(12,12,12,0.6)] transition-colors">
+                <Link href={link.href} className="block text-base font-medium py-2 text-[#ffefd6] hover:text-[rgba(255,239,214,0.6)] transition-colors">
                   {link.label}
                 </Link>
               </li>
             ))}
             <li className="pt-2">
-              <Link href="/contact" className="inline-block bg-[#0c0c0c] text-[#0c0c0c] text-sm font-semibold px-5 py-2.5 rounded-full">
+              <Link href="/contact" className="inline-block bg-[#fa9173] text-[#fffef9] text-sm font-semibold px-5 py-2.5 rounded-full">
                 Let&apos;s Talk
               </Link>
             </li>

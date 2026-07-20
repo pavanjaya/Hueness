@@ -20,16 +20,16 @@ export default function ClientStrip() {
   return (
     <section
       className="py-12 overflow-hidden"
-      style={{ borderTop: "1px solid rgba(12,12,12,0.1)" }}
+      style={{ borderTop: "1px solid rgba(45,46,56,0.1)" }}
     >
       <div className="relative flex">
         <div className="animate-marquee flex items-center gap-12">
           {doubled.map((logo, i) => (
             <span key={i} className="contents">
-              <span className={`shrink-0 text-[rgba(12,12,12,0.22)] hover:text-[rgba(12,12,12,0.65)] transition-colors duration-300 ${logo.style}`}>
+              <span className={`shrink-0 text-[rgba(45,46,56,0.22)] hover:text-[rgba(45,46,56,0.65)] transition-colors duration-300 ${logo.style}`}>
                 {logo.name}
               </span>
-              <span className="shrink-0 text-[rgba(12,12,12,0.12)] text-xs">·</span>
+              <span className="shrink-0 text-[rgba(45,46,56,0.12)] text-xs">·</span>
             </span>
           ))}
         </div>

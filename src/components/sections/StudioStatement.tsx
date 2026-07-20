@@ -11,13 +11,18 @@ export default function StudioStatement() {
   return (
     <section
       className="px-6 xl:px-10 py-28 md:py-40"
-      style={{ borderTop: "1px solid rgba(12,12,12,0.1)" }}
+      style={{ borderTop: "1px solid rgba(45,46,56,0.1)" }}
     >
       {/* Statement */}
       <RevealOnScroll>
         <p
-          className="font-medium text-[#0c0c0c] leading-[1.15] tracking-tight mb-24 md:mb-32 max-w-5xl"
-          style={{ fontSize: "clamp(28px,3.5vw,56px)" }}
+          className="text-[#2d2e38] leading-[1.2] tracking-tight mb-24 md:mb-32 max-w-5xl"
+          style={{
+            fontSize: "clamp(28px,3.5vw,56px)",
+            fontFamily: "var(--font-serif), 'IBM Plex Serif', Georgia, serif",
+            fontStyle: "italic",
+            fontWeight: 400,
+          }}
         >
           We are a strategic partner to our clients — helping businesses ideate, design, build and scale exceptional brands, products and growth systems from strategy through execution.
         </p>
@@ -29,12 +34,15 @@ export default function StudioStatement() {
           {stats.map((s, i) => (
             <div key={i}>
               <p
-                className="font-bold text-[#0c0c0c] leading-none tracking-tight mb-3"
-                style={{ fontSize: "clamp(64px,9vw,128px)" }}
+                className="font-display font-black uppercase text-[#2d2e38] leading-none tracking-tight mb-3"
+                style={{
+                  fontSize: "clamp(72px,10vw,140px)",
+                  fontFamily: "var(--font-display), 'Barlow Condensed', Arial, sans-serif",
+                }}
               >
                 {s.value}
               </p>
-              <p className="text-xs font-medium text-[rgba(12,12,12,0.4)] uppercase tracking-widest whitespace-pre-line leading-relaxed">
+              <p className="text-xs font-medium text-[rgba(45,46,56,0.4)] uppercase tracking-widest whitespace-pre-line leading-relaxed">
                 {s.label}
               </p>
             </div>
@@ -45,7 +53,8 @@ export default function StudioStatement() {
       <RevealOnScroll delay={160}>
         <Link
           href="/studio-page"
-          className="inline-flex items-center gap-3 text-sm font-medium text-[#0c0c0c] border border-[rgba(12,12,12,0.2)] px-7 py-3.5 rounded-full hover:border-[rgba(12,12,12,0.6)] transition-colors"
+          className="inline-flex items-center gap-3 text-sm font-medium text-[#2d2e38] border border-[rgba(45,46,56,0.25)] px-7 py-3.5 hover:bg-[#2d2e38] hover:text-[#fffef9] transition-all"
+          style={{ borderRadius: "50px" }}
         >
           More about us →
         </Link>

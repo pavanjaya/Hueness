@@ -5,13 +5,13 @@ export default function Hero() {
   return (
     <section
       className="min-h-screen flex flex-col justify-between px-6 xl:px-10 pt-32 pb-10"
-      style={{ background: "#f4f1eb" }}
+      style={{ background: "#fffef9" }}
     >
       {/* Headline */}
       <div className="flex-1 flex flex-col justify-center py-12">
         <h1
-          className="font-bold leading-[0.93] tracking-tight text-[#0c0c0c] max-w-[90vw]"
-          style={{ fontSize: "clamp(52px, 7.5vw, 120px)" }}
+          className="font-display font-black uppercase leading-[0.88] tracking-tight text-[#2d2e38] max-w-[95vw]"
+          style={{ fontSize: "clamp(64px, 9.5vw, 148px)", fontFamily: "var(--font-display), 'Barlow Condensed', Arial, sans-serif" }}
         >
           {["From strategy", "to scale, we help", "businesses build", "exceptional", "brands & products."].map((line, i) => (
             <span key={i} className="reveal-line-outer">
@@ -27,24 +27,25 @@ export default function Hero() {
       <div
         className="flex flex-col md:flex-row md:items-end justify-between gap-6 pt-8 opacity-0"
         style={{
-          borderTop: "1px solid rgba(12,12,12,0.12)",
+          borderTop: "1px solid rgba(45,46,56,0.12)",
           animation: "page-in 0.8s cubic-bezier(0.16,1,0.3,1) 0.6s both",
         }}
       >
-        <p className="text-sm text-[rgba(12,12,12,0.5)] max-w-xs leading-relaxed font-light">
+        <p className="text-sm text-[rgba(45,46,56,0.5)] max-w-xs leading-relaxed" style={{ fontFamily: "var(--font-serif), 'IBM Plex Serif', Georgia, serif", fontStyle: "italic" }}>
           An integrated design & technology studio — brand, engineering, and marketing in one place.
         </p>
 
-        <div className="flex items-center gap-6 shrink-0">
+        <div className="flex items-center gap-4 shrink-0">
           <Link
             href="/work"
-            className="text-sm font-medium text-[rgba(12,12,12,0.55)] hover:text-[#0c0c0c] transition-colors"
+            className="text-sm font-medium text-[rgba(45,46,56,0.55)] hover:text-[#2d2e38] transition-colors"
           >
             View work
           </Link>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 bg-[#0c0c0c] text-[#f4f1eb] text-sm font-semibold px-7 py-3.5 rounded-full hover:opacity-85 transition-opacity"
+            className="inline-flex items-center gap-2 bg-[#fa9173] text-[#fffef9] text-sm font-semibold px-7 py-3.5 hover:opacity-90 transition-opacity"
+            style={{ borderRadius: "50px" }}
           >
             Start a project
           </Link>
