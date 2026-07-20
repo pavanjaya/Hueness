@@ -15,8 +15,7 @@ const products = [
     description: "A clean, no-frills logging tool built for developers who value clarity. JustLog captures what matters and surfaces it fast.",
     status: "Live",
     slug: "justlog",
-    bg: "#000000",
-    accent: "#000000",
+    bg: "#323462",
     tags: ["Developer Tool", "Productivity"],
   },
   {
@@ -25,8 +24,7 @@ const products = [
     description: "A creative canvas where AI meets artistic expression. Paintora lets anyone create stunning visuals with the power of generative AI.",
     status: "Beta",
     slug: "paintora",
-    bg: "#1a1a2e",
-    accent: "#7c3aed",
+    bg: "#2d2e38",
     tags: ["AI", "Creative", "Design Tool"],
   },
   {
@@ -35,8 +33,8 @@ const products = [
     description: "Travel planning reimagined — AI-powered itineraries, curated recommendations, and a beautiful interface that makes planning as fun as the trip.",
     status: "Coming Soon",
     slug: "howztrip",
-    bg: "#0f2a1a",
-    accent: "#16a34a",
+    bg: "#9ee2d2",
+    dark: false,
     tags: ["Travel", "AI", "Lifestyle"],
   },
   {
@@ -45,8 +43,8 @@ const products = [
     description: "An AI-powered platform offering personalized facial hair style recommendations. Built using design thinking and computer vision to empower modern grooming.",
     status: "Live",
     slug: "groomre",
-    bg: "#1a0f0a",
-    accent: "#c2410c",
+    bg: "#fa9173",
+    dark: false,
     tags: ["AI", "Lifestyle", "Grooming"],
   },
 ];
@@ -55,27 +53,35 @@ export default function ProductsPage() {
   return (
     <div className="pt-20">
       <div className="px-6 xl:px-10 py-20 md:py-28">
-        <p className="text-xs font-semibold uppercase tracking-widest text-[#000000] mb-6">In The Lab</p>
-        <h1 className="text-5xl md:text-7xl font-bold text-[#000000] tracking-tight leading-tight max-w-4xl mb-8">
+        <p className="text-xs font-semibold uppercase tracking-widest text-[#fa9173] mb-6">In The Lab</p>
+        <h1
+          className="font-black uppercase text-[#2d2e38] tracking-tight leading-[0.88] max-w-4xl mb-8"
+          style={{ fontSize: "clamp(56px,8vw,120px)", fontFamily: "var(--font-display),'Barlow Condensed',Arial,sans-serif" }}
+        >
           Products we&apos;re building for the world.
         </h1>
-        <p className="text-[#6b6b6b] text-lg max-w-2xl leading-relaxed">
+        <p className="text-[rgba(45,46,56,0.55)] text-lg max-w-2xl leading-relaxed" style={{ fontFamily: "var(--font-serif),'IBM Plex Serif',Georgia,serif", fontStyle: "italic" }}>
           At Hueness, we don&apos;t just build for clients — we build for ourselves. Our in-house products are born from the same design intuition and engineering rigour we bring to every engagement.
         </p>
       </div>
 
-      <div className="px-6 xl:px-10 pb-24 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="px-6 xl:px-10 pb-24 grid grid-cols-1 md:grid-cols-2 gap-4">
         {products.map((p) => (
           <Link
             key={p.slug}
             href={`/products/${p.slug}`}
-            className="group rounded-sm p-10 md:p-14 flex flex-col justify-between min-h-[380px] hover:scale-[1.01] transition-transform duration-200"
+            className="group p-10 md:p-14 flex flex-col justify-between min-h-[380px] hover:scale-[1.01] transition-transform duration-200"
             style={{ backgroundColor: p.bg }}
           >
             <div className="flex items-start justify-between">
               <span
-                className="text-xs font-semibold px-3 py-1.5 rounded-full"
-                style={{ backgroundColor: `${p.accent}25`, color: p.accent }}
+                className="text-xs font-semibold px-3 py-1.5"
+                style={{
+                  borderRadius: "50px",
+                  background: "rgba(255,255,255,0.15)",
+                  color: p.dark === false ? "#2d2e38" : "#ffefd6",
+                  border: "1px solid rgba(255,255,255,0.2)",
+                }}
               >
                 {p.status}
               </span>
@@ -84,13 +90,37 @@ export default function ProductsPage() {
                 className="text-white/20 group-hover:text-white/60 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"
               />
             </div>
-
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-3 tracking-tight">{p.name}</h2>
-              <p className="text-white/60 text-base mb-4 leading-relaxed">{p.description}</p>
+              <h2
+                className="font-black uppercase mb-3 tracking-tight"
+                style={{
+                  fontSize: "clamp(40px,5vw,72px)",
+                  fontFamily: "var(--font-display),'Barlow Condensed',Arial,sans-serif",
+                  color: p.dark === false ? "#2d2e38" : "#ffefd6",
+                }}
+              >
+                {p.name}
+              </h2>
+              <p
+                className="text-base mb-4 leading-relaxed"
+                style={{
+                  color: p.dark === false ? "rgba(45,46,56,0.65)" : "rgba(255,239,214,0.6)",
+                  fontFamily: "var(--font-serif),'IBM Plex Serif',Georgia,serif",
+                }}
+              >
+                {p.description}
+              </p>
               <div className="flex flex-wrap gap-2">
                 {p.tags.map((t) => (
-                  <span key={t} className="text-xs px-3 py-1 rounded-full border border-white/10 text-white/40">
+                  <span
+                    key={t}
+                    className="text-xs px-3 py-1"
+                    style={{
+                      borderRadius: "50px",
+                      border: "1px solid rgba(255,255,255,0.15)",
+                      color: p.dark === false ? "rgba(45,46,56,0.5)" : "rgba(255,239,214,0.4)",
+                    }}
+                  >
                     {t}
                   </span>
                 ))}

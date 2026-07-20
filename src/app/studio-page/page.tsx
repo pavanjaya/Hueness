@@ -35,32 +35,43 @@ export default function StudioPage() {
     <div className="pt-20">
       {/* Hero */}
       <div className="px-6 xl:px-10 py-20 md:py-28">
-        <p className="text-xs font-semibold uppercase tracking-widest text-[#000000] mb-6">About Hueness</p>
-        <h1 className="text-5xl md:text-7xl font-bold text-[#000000] tracking-tight leading-tight max-w-4xl mb-8">
+        <p className="text-xs font-semibold uppercase tracking-widest text-[#fa9173] mb-6">About Hueness</p>
+        <h1
+          className="font-black uppercase text-[#2d2e38] tracking-tight leading-[0.88] max-w-4xl mb-8"
+          style={{ fontSize: "clamp(56px,8vw,120px)", fontFamily: "var(--font-display),'Barlow Condensed',Arial,sans-serif" }}
+        >
           Transforming bold ideas into global market-ready brands.
         </h1>
-        <p className="text-[#6b6b6b] text-lg max-w-2xl leading-relaxed">
+        <p className="text-[rgba(45,46,56,0.55)] text-lg max-w-2xl leading-relaxed" style={{ fontFamily: "var(--font-serif),'IBM Plex Serif',Georgia,serif", fontStyle: "italic" }}>
           A purpose-led troupe of strategists, designers & engineers backed by 30+ years of creative leadership experience in top Fortune 500 companies — at the intersection of design intuition, strategic insight & emerging AI tech integration.
         </p>
       </div>
 
-      {/* Philosophy */}
-      <div className="bg-[#000000] py-24">
+      {/* Philosophy — purple section */}
+      <div className="py-24" style={{ background: "#323462" }}>
         <div className="px-6 xl:px-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-widest text-[#000000] mb-4">Hue Spot</p>
-              <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight mb-6">
+              <p className="text-xs font-semibold uppercase tracking-widest text-[#fa9173] mb-4">Hue Spot</p>
+              <h2
+                className="font-black uppercase text-[#ffefd6] tracking-tight leading-[0.88] mb-6"
+                style={{ fontSize: "clamp(40px,5vw,72px)", fontFamily: "var(--font-display),'Barlow Condensed',Arial,sans-serif" }}
+              >
                 Good Design is Good Business. Period.
               </h2>
-              <p className="text-[#9a9a9a] leading-relaxed">
+              <p className="leading-relaxed" style={{ color: "rgba(255,239,214,0.6)", fontFamily: "var(--font-serif),'IBM Plex Serif',Georgia,serif" }}>
                 Design forms the basis of human intelligence. Though widely neglected, we believe that intuition and instinct are at the core of every great brand, product, or service experience. We call it the Hue Spot — that sweet intersection of strategy, creativity, and technology.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-4">
               {["Agile", "Responsible", "Adaptive", "Purpose-Led"].map((v) => (
-                <div key={v} className="bg-[#141414] rounded-sm p-6 text-center">
-                  <p className="text-white font-bold text-xl">{v}</p>
+                <div key={v} className="p-6 text-center" style={{ background: "rgba(255,239,214,0.08)", border: "1px solid rgba(255,239,214,0.12)" }}>
+                  <p
+                    className="font-black uppercase text-[#ffefd6] text-xl"
+                    style={{ fontFamily: "var(--font-display),'Barlow Condensed',Arial,sans-serif" }}
+                  >
+                    {v}
+                  </p>
                 </div>
               ))}
             </div>
@@ -70,20 +81,28 @@ export default function StudioPage() {
 
       {/* Approach */}
       <div className="px-6 xl:px-10 py-24">
-        <p className="text-xs font-semibold uppercase tracking-widest text-[#000000] mb-4">Our Approach</p>
-        <h2 className="text-4xl font-bold text-[#000000] tracking-tight mb-12">
+        <p className="text-xs font-semibold uppercase tracking-widest text-[#fa9173] mb-4">Our Approach</p>
+        <h2
+          className="font-black uppercase text-[#2d2e38] tracking-tight mb-12"
+          style={{ fontSize: "clamp(40px,5vw,72px)", fontFamily: "var(--font-display),'Barlow Condensed',Arial,sans-serif" }}
+        >
           Agile, Responsible & Adaptive.
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[#e5e3de]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-px" style={{ background: "rgba(45,46,56,0.08)" }}>
           {approach.map((a, i) => (
-            <div key={a.step} className="bg-[#ffffff] p-10">
-              <span className="text-xs font-semibold text-[#6b6b6b] uppercase tracking-widest">Step 0{i + 1}</span>
-              <h3 className="text-2xl font-bold text-[#000000] mt-2 mb-1">{a.step}</h3>
-              <p className="text-[#000000] text-sm font-medium mb-6">{a.label}</p>
+            <div key={a.step} className="p-10" style={{ background: "#fffef9" }}>
+              <span className="text-xs font-semibold text-[rgba(45,46,56,0.35)] uppercase tracking-widest">Step 0{i + 1}</span>
+              <h3
+                className="font-black uppercase text-[#2d2e38] mt-2 mb-1"
+                style={{ fontSize: "clamp(28px,3vw,40px)", fontFamily: "var(--font-display),'Barlow Condensed',Arial,sans-serif" }}
+              >
+                {a.step}
+              </h3>
+              <p className="text-[#2d2e38] text-sm font-medium mb-6">{a.label}</p>
               <ul className="space-y-2">
                 {a.items.map((item) => (
-                  <li key={item} className="text-sm text-[#6b6b6b] flex items-start gap-2">
-                    <span className="w-1 h-1 rounded-full bg-[#6b6b6b] mt-2 shrink-0" />
+                  <li key={item} className="text-sm text-[rgba(45,46,56,0.5)] flex items-start gap-2" style={{ fontFamily: "var(--font-serif),'IBM Plex Serif',Georgia,serif" }}>
+                    <span className="w-1 h-1 rounded-full bg-[#fa9173] mt-2 shrink-0" />
                     {item}
                   </li>
                 ))}
@@ -94,16 +113,19 @@ export default function StudioPage() {
       </div>
 
       {/* Team */}
-      <div className="bg-white py-24">
+      <div className="py-24" style={{ background: "#ffefd6" }}>
         <div className="px-6 xl:px-10">
-          <p className="text-xs font-semibold uppercase tracking-widest text-[#000000] mb-4">Hue Team</p>
-          <h2 className="text-4xl font-bold text-[#000000] tracking-tight mb-12">
+          <p className="text-xs font-semibold uppercase tracking-widest text-[#fa9173] mb-4">Hue Team</p>
+          <h2
+            className="font-black uppercase text-[#2d2e38] tracking-tight mb-12"
+            style={{ fontSize: "clamp(40px,5vw,72px)", fontFamily: "var(--font-display),'Barlow Condensed',Arial,sans-serif" }}
+          >
             The passionate brave souls behind our projects.
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {team.map((member) => (
               <div key={member.name} className="group">
-                <div className="aspect-square rounded-sm mb-4 overflow-hidden relative">
+                <div className="aspect-square mb-4 overflow-hidden relative">
                   <Image
                     src={member.photo}
                     alt={member.name}
@@ -111,8 +133,8 @@ export default function StudioPage() {
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <h3 className="font-semibold text-[#000000] text-sm">{member.name}</h3>
-                <p className="text-[#6b6b6b] text-xs mt-0.5">{member.role}</p>
+                <h3 className="font-semibold text-[#2d2e38] text-sm">{member.name}</h3>
+                <p className="text-[rgba(45,46,56,0.5)] text-xs mt-0.5">{member.role}</p>
               </div>
             ))}
           </div>
@@ -121,17 +143,27 @@ export default function StudioPage() {
 
       {/* Locations */}
       <div className="px-6 xl:px-10 py-24">
-        <p className="text-xs font-semibold uppercase tracking-widest text-[#000000] mb-4">Find Us</p>
-        <h2 className="text-4xl font-bold text-[#000000] tracking-tight mb-12">Two studios, one vision.</h2>
+        <p className="text-xs font-semibold uppercase tracking-widest text-[#fa9173] mb-4">Find Us</p>
+        <h2
+          className="font-black uppercase text-[#2d2e38] tracking-tight mb-12"
+          style={{ fontSize: "clamp(40px,5vw,72px)", fontFamily: "var(--font-display),'Barlow Condensed',Arial,sans-serif" }}
+        >
+          Two studios, one vision.
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {[
             { city: "Bangalore", state: "Karnataka", tagline: "Design & Tech Hub" },
             { city: "Nashik", state: "Maharashtra", tagline: "Creative & Strategy Studio" },
           ].map((l) => (
-            <div key={l.city} className="bg-[#ffffff] border  rounded-sm p-10">
-              <p className="text-xs font-semibold uppercase tracking-widest text-[#6b6b6b] mb-2">{l.tagline}</p>
-              <h3 className="text-3xl font-bold text-[#000000]">{l.city}</h3>
-              <p className="text-[#6b6b6b] mt-1">{l.state}, India</p>
+            <div key={l.city} className="p-10" style={{ background: "#f0ddc7" }}>
+              <p className="text-xs font-semibold uppercase tracking-widest text-[rgba(45,46,56,0.45)] mb-2">{l.tagline}</p>
+              <h3
+                className="font-black uppercase text-[#2d2e38]"
+                style={{ fontSize: "clamp(36px,4vw,56px)", fontFamily: "var(--font-display),'Barlow Condensed',Arial,sans-serif" }}
+              >
+                {l.city}
+              </h3>
+              <p className="text-[rgba(45,46,56,0.5)] mt-1">{l.state}, India</p>
             </div>
           ))}
         </div>

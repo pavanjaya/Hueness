@@ -18,33 +18,39 @@ export default function BlogPage() {
   return (
     <div className="pt-20">
       <div className="px-6 xl:px-10 py-20 md:py-28">
-        <p className="text-xs font-semibold uppercase tracking-widest text-[#000000] mb-6">Hue Stream</p>
-        <h1 className="text-5xl md:text-7xl font-bold text-[#000000] tracking-tight leading-tight max-w-3xl mb-8">
+        <p className="text-xs font-semibold uppercase tracking-widest text-[#fa9173] mb-6">Hue Stream</p>
+        <h1
+          className="font-black uppercase text-[#2d2e38] tracking-tight leading-[0.88] max-w-3xl mb-8"
+          style={{ fontSize: "clamp(56px,8vw,120px)", fontFamily: "var(--font-display),'Barlow Condensed',Arial,sans-serif" }}
+        >
           Ideas, insights & stories.
         </h1>
-        <p className="text-[#6b6b6b] text-lg max-w-xl leading-relaxed">
+        <p className="text-[rgba(45,46,56,0.55)] text-lg max-w-xl leading-relaxed" style={{ fontFamily: "var(--font-serif),'IBM Plex Serif',Georgia,serif", fontStyle: "italic" }}>
           Thoughts on design, technology, branding, and building products that matter — straight from our studio.
         </p>
       </div>
 
       <div className="px-6 xl:px-10 pb-24">
-        <div className="divide-y divide-[#e5e3de]">
+        <div style={{ borderTop: "1px solid rgba(45,46,56,0.1)" }}>
           {posts.map((post, i) => (
-            <article key={i} className="group py-8 flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer hover:bg-white -mx-4 px-4 rounded-sm transition-colors">
+            <article key={i} className="group py-8 flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer -mx-4 px-4 hover:bg-[#f0ddc7] transition-colors" style={{ borderBottom: "1px solid rgba(45,46,56,0.08)" }}>
               <div className="flex items-start gap-6">
-                <span className="text-xs font-semibold text-[#6b6b6b] uppercase tracking-widest pt-1 w-8 shrink-0">
+                <span className="text-xs font-semibold text-[rgba(45,46,56,0.3)] uppercase tracking-widest pt-1 w-8 shrink-0">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <div>
-                  <span className="text-xs font-semibold px-3 py-1 rounded-full bg-[#f0ede8] text-[#6b6b6b] mb-3 inline-block">
+                  <span className="text-xs font-semibold px-3 py-1 text-[#fa9173] mb-3 inline-block border border-[rgba(250,145,115,0.3)]" style={{ borderRadius: "50px" }}>
                     {post.tag}
                   </span>
-                  <h2 className="text-xl md:text-2xl font-bold text-[#000000] group-hover:text-[#000000] transition-colors">
+                  <h2
+                    className="text-xl md:text-2xl font-semibold text-[#2d2e38] group-hover:text-[#2d2e38] transition-colors"
+                    style={{ fontFamily: "var(--font-serif),'IBM Plex Serif',Georgia,serif" }}
+                  >
                     {post.title}
                   </h2>
                 </div>
               </div>
-              <div className="flex items-center gap-4 md:gap-8 text-sm text-[#6b6b6b] pl-14 md:pl-0 shrink-0">
+              <div className="flex items-center gap-4 md:gap-8 text-sm text-[rgba(45,46,56,0.4)] pl-14 md:pl-0 shrink-0">
                 <span>{post.readTime} read</span>
                 <span>{post.date}</span>
               </div>
