@@ -131,7 +131,7 @@ export default function ServicesSection() {
                     fontSize: "clamp(22px, 2.4vw, 41px)",
                     fontFamily: "var(--font-geist-sans), 'Geist', system-ui, sans-serif",
                     fontWeight: 700,
-                    color: open === i ? "#2d2e38" : hovered === i ? "#fa9173" : "rgba(45,46,56,0.85)",
+                    color: open === i ? "#2d2e38" : "rgba(45,46,56,0.85)",
                     lineHeight: 1.05,
                     letterSpacing: "-0.02em",
                     transition: "color 200ms ease",
