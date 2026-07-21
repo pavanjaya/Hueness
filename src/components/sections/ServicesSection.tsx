@@ -35,12 +35,7 @@ export default function ServicesSection() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section
-      style={{
-        background: "#fffef9",
-        borderTop: "1px solid rgba(45,46,56,0.1)",
-      }}
-    >
+    <section style={{ background: "#fffef9" }}>
       <div
         className="grid"
         style={{ gridTemplateColumns: "1fr 1fr", minHeight: "80vh" }}
@@ -48,7 +43,6 @@ export default function ServicesSection() {
         {/* Left — label + statement text */}
         <div
           className="hidden md:flex flex-col justify-between px-8 md:px-14 xl:px-20 py-20 md:py-28"
-          style={{ borderRight: "1px solid rgba(45,46,56,0.08)" }}
         >
           <p
             style={{
