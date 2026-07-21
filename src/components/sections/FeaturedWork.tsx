@@ -5,7 +5,7 @@ const GAP = 16;
 
 const row1 = [
   { title: "Rishaba Industries", desc: "Brand identity for an industrial manufacturing leader", image: "/projects/rishaba.png", bg: "#f0ddc7", size: "large" },
-  { title: "Kinderlogica",       desc: "Brand identity for an innovative children's education platform", image: "/projects/kinderlogica.png", bg: "#9ee2d2", size: "large" },
+  { title: "The Bake Studio",    desc: "Brand identity & packaging for a premium bakery brand", image: "/projects/bakestudio.png", bg: "#1a1a1a", size: "large" },
   { title: "Mustang",            desc: "Brand identity for a premium lifestyle brand", image: "/projects/mustang.png", bg: "#ffefd6", size: "small" },
   { title: "Megasoft",           desc: "Brand & web for a cutting-edge technology company", image: "/projects/megasoft.png", bg: "#f0ddc7", size: "small" },
 ];
