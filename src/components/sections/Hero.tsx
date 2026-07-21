@@ -23,28 +23,23 @@ export default function Hero() {
         </h1>
       </div>
 
-      {/* Video placeholder */}
+      {/* Showreel video */}
       <div
         className="w-full relative overflow-hidden opacity-0"
         style={{
           aspectRatio: "16/9",
-          background: "#0c0c0c",
-          borderRadius: "8px",
+          borderRadius: "0px",
           animation: "page-in 0.9s cubic-bezier(0.16,1,0.3,1) 0.55s both",
         }}
       >
-        {/* Play button */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <button
-            className="group flex items-center justify-center w-16 h-16 rounded-full transition-all duration-300 hover:scale-110"
-            style={{ background: "rgba(255,254,249,0.12)", border: "1px solid rgba(255,254,249,0.2)" }}
-            aria-label="Play showreel"
-          >
-            <svg width="18" height="20" viewBox="0 0 18 20" fill="none" className="ml-1">
-              <path d="M1 1L17 10L1 19V1Z" fill="#fffef9" />
-            </svg>
-          </button>
-        </div>
+        <video
+          className="w-full h-full object-cover"
+          src="/showreel.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
         {/* Label */}
         <div className="absolute bottom-5 left-6 flex items-center gap-3">
           <span className="text-[rgba(255,254,249,0.35)] text-xs font-semibold uppercase tracking-[0.2em]">Showreel 2024</span>
