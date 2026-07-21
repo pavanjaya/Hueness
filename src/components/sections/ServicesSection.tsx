@@ -5,32 +5,27 @@ import { useState } from "react";
 
 const services = [
   {
-    title: "Brand Strategy",
+    title: "Strategy",
     href: "/design",
-    desc: "Brand positioning, naming, narrative and the strategic foundation that makes your business distinct and memorable.",
+    desc: "Brand positioning, naming, narrative and the strategic foundation that makes your business distinct and ready to compete.",
   },
   {
-    title: "Brand Identity",
+    title: "Design",
     href: "/design",
-    desc: "Visual identity systems, logos, guidelines and all the brand touchpoints that make a lasting impression.",
+    desc: "Brand identity, UX/UI, packaging and design systems — every detail crafted to move people and drive business.",
   },
   {
-    title: "UX & Product Design",
-    href: "/design",
-    desc: "Human-centred design for digital products — from research and wireframes to polished UI and design systems.",
-  },
-  {
-    title: "Web & App Development",
+    title: "Technology",
     href: "/tech",
-    desc: "Scalable, performant web and mobile applications built with modern technology and AI integration.",
+    desc: "Scalable web and mobile products, SaaS platforms and AI-powered solutions built for performance and growth.",
   },
   {
-    title: "Growth Marketing",
+    title: "Marketing",
     href: "/marketing",
-    desc: "Data-led campaigns, performance marketing, content strategy and SEO that drive real business growth.",
+    desc: "Data-led campaigns, performance marketing, content strategy and SEO that attract, engage and convert.",
   },
   {
-    title: "In-House Products",
+    title: "In House Product",
     href: "/products",
     desc: "We build and launch our own digital products at the intersection of design intuition and emerging technology.",
   },
