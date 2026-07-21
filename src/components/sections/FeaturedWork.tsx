@@ -11,7 +11,7 @@ const row1 = [
 ];
 
 const row2 = [
-  { title: "Indu Memorial",     desc: "Brand identity for a trusted healthcare institution", image: "/projects/indu.png", bg: "#e4caca", size: "large" },
+  { title: "Playissm",          desc: "Brand identity for a next-gen play & entertainment brand", image: "/projects/playissm.png", bg: "#e4caca", size: "large" },
   { title: "Sarang Archibuild", desc: "Brand identity for a premium architecture firm", image: "/projects/sarang.png", bg: "#ffefd6", size: "small" },
   { title: "See all projects →", desc: "50+ brands built across design, tech and marketing", image: "", bg: "#2d2e38", size: "wide", cta: true },
 ];
