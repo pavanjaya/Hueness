@@ -8,34 +8,44 @@ import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
 const services = {
-  Strategy: {
-    href: "/design",
-    items: [
-      { label: "Business Strategy", href: "/design" },
-      { label: "Brand Strategy", href: "/design" },
-      { label: "Product Strategy", href: "/design" },
-      { label: "Research & Discovery", href: "/design" },
-      { label: "Innovation Consulting", href: "/design" },
-    ],
-  },
-  Design: {
+  Branding: {
     href: "/design",
     items: [
       { label: "Brand Identity", href: "/design" },
+      { label: "Visual Systems", href: "/design" },
+      { label: "Packaging Design", href: "/design" },
+      { label: "Brand Guidelines", href: "/design" },
+      { label: "Art Direction", href: "/design" },
+    ],
+  },
+  "Digital Experience": {
+    href: "/design",
+    items: [
       { label: "UX / UI Design", href: "/design" },
       { label: "Web Design", href: "/design" },
-      { label: "Packaging Design", href: "/design" },
+      { label: "Product Design", href: "/design" },
       { label: "Design Systems", href: "/design" },
+      { label: "Motion Design", href: "/design" },
     ],
   },
   Technology: {
     href: "/tech",
     items: [
-      { label: "Product Engineering", href: "/tech" },
-      { label: "SaaS Development", href: "/tech" },
       { label: "Web & Mobile Development", href: "/tech" },
+      { label: "SaaS Development", href: "/tech" },
       { label: "AI Solutions", href: "/tech" },
+      { label: "Product Engineering", href: "/tech" },
       { label: "API & Integrations", href: "/tech" },
+    ],
+  },
+  Products: {
+    href: "/tech",
+    items: [
+      { label: "MVP Development", href: "/tech" },
+      { label: "Product Strategy", href: "/tech" },
+      { label: "Zero to One Builds", href: "/tech" },
+      { label: "SaaS Products", href: "/tech" },
+      { label: "AI-Powered Apps", href: "/tech" },
     ],
   },
   Marketing: {
