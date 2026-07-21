@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <section
-      className="flex flex-col px-8 md:px-14 xl:px-20 pt-32 pb-10"
+      className="flex flex-col px-8 md:px-14 xl:px-20 pt-48 pb-10"
       style={{ background: "#fffef9" }}
     >
       {/* Headline — smaller, tight above the video */}
