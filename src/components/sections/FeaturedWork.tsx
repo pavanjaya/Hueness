@@ -38,15 +38,17 @@ function Card({ p, imgHeight }: { p: Project; imgHeight: number }) {
           </div>
         )}
       </div>
-      {/* Text below */}
-      <div className="pt-4">
-        <p className="font-normal text-[#2d2e38] leading-snug" style={{ fontSize: p.size === "large" ? "clamp(20px, 1.8vw, 26px)" : "clamp(16px, 1.4vw, 20px)", fontFamily: "var(--font-geist-sans)" }}>
-          {p.title}
-        </p>
-        <p className="text-[rgba(45,46,56,0.5)] mt-1" style={{ fontSize: "clamp(11px, 0.9vw, 13px)", fontFamily: "var(--font-geist-sans)" }}>
-          {p.desc}
-        </p>
-      </div>
+      {/* Text below — hidden for CTA card */}
+      {!p.cta && (
+        <div className="pt-4">
+          <p className="font-normal text-[#2d2e38] leading-snug" style={{ fontSize: p.size === "large" ? "clamp(20px, 1.8vw, 26px)" : "clamp(16px, 1.4vw, 20px)", fontFamily: "var(--font-geist-sans)" }}>
+            {p.title}
+          </p>
+          <p className="text-[rgba(45,46,56,0.5)] mt-1" style={{ fontSize: "clamp(11px, 0.9vw, 13px)", fontFamily: "var(--font-geist-sans)" }}>
+            {p.desc}
+          </p>
+        </div>
+      )}
     </>
   );
 
