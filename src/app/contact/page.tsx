@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="pt-20">
+    <div style={{ paddingTop: "88px" }}>
       <div className="px-8 md:px-14 xl:px-20 py-20 md:py-28 grid grid-cols-1 lg:grid-cols-2 gap-16">
         {/* Left */}
         <div>

@@ -16,7 +16,7 @@ const posts = [
 
 export default function BlogPage() {
   return (
-    <div className="pt-20">
+    <div style={{ paddingTop: "88px" }}>
       <div className="px-8 md:px-14 xl:px-20 py-20 md:py-28">
         <p className="text-xs font-semibold uppercase tracking-widest text-[#fa9173] mb-6">Hue Stream</p>
         <h1
