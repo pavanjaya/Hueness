@@ -59,8 +59,8 @@ export default function FeaturedWork() {
       {/* Header */}
       <div className="flex items-center justify-between mb-16">
         <h2
-          className="font-display font-black uppercase tracking-wide text-[#fa9173]"
-          style={{ fontSize: "clamp(11px, 1vw, 13px)", letterSpacing: "0.2em", fontFamily: "var(--font-display), 'Barlow Condensed', Arial, sans-serif" }}
+          className="font-black uppercase tracking-wide text-[#2d2e38]"
+          style={{ fontSize: "clamp(13px, 1.2vw, 15.6px)", letterSpacing: "0.2em", fontFamily: "var(--font-geist-sans), 'Geist', system-ui, sans-serif" }}
         >
           Selected Work
         </h2>
