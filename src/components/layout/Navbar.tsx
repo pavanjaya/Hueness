@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -128,20 +129,22 @@ export default function Navbar() {
 
             {servicesOpen && (
               <>
-                {/* Backdrop shim */}
-                <div
-                  onClick={() => setServicesOpen(false)}
-                  style={{
-                    position: "fixed",
-                    top: scrolled ? "68px" : "88px",
-                    left: 0,
-                    right: 0,
-                    bottom: 0,
-                    background: "rgba(0,0,0,0.5)",
-                    zIndex: 40,
-                    animation: "page-in 0.2s ease both",
-                  }}
-                />
+                {/* Backdrop shim — portalled to body to escape header stacking context */}
+                {typeof document !== "undefined" && createPortal(
+                  <div
+                    onClick={() => setServicesOpen(false)}
+                    style={{
+                      position: "fixed",
+                      top: scrolled ? "68px" : "88px",
+                      left: 0,
+                      right: 0,
+                      bottom: 0,
+                      background: "rgba(0,0,0,0.5)",
+                      zIndex: 45,
+                    }}
+                  />,
+                  document.body
+                )}
               <div
                 onMouseLeave={() => setServicesOpen(false)}
                 className="fixed left-0 right-0 px-8 md:px-14 xl:px-20 py-10 z-50"
