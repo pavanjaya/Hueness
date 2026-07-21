@@ -72,54 +72,30 @@ export default function ServicesSection() {
           {/* Animated geometric shapes */}
           <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 0 }}>
 
-            {/* Circle outline — large */}
-            <svg style={{ position: "absolute", top: "8%", left: "58%", animation: "geo-float 7s ease-in-out 0s infinite" }} width="72" height="72" viewBox="0 0 72 72" fill="none">
-              <circle cx="36" cy="36" r="34" stroke="rgba(45,46,56,0.12)" strokeWidth="1.5"/>
-            </svg>
+            {/* Coral dot — large */}
+            <span style={{ position: "absolute", top: "12%", left: "62%", width: 22, height: 22, borderRadius: "50%", background: "#fa9173", opacity: 0.7, animation: "dot-float 5.5s ease-in-out 0s infinite" }}/>
 
-            {/* Circle filled — small coral */}
-            <svg style={{ position: "absolute", top: "22%", left: "80%", animation: "geo-float 5.5s ease-in-out 1s infinite" }} width="14" height="14" viewBox="0 0 14 14" fill="none">
-              <circle cx="7" cy="7" r="7" fill="#fa9173" opacity="0.5"/>
-            </svg>
+            {/* Purple dot */}
+            <span style={{ position: "absolute", top: "35%", left: "80%", width: 14, height: 14, borderRadius: "50%", background: "#7b6cf6", opacity: 0.6, animation: "dot-float 7s ease-in-out 0.8s infinite" }}/>
 
-            {/* Square outline — rotated */}
-            <svg style={{ position: "absolute", top: "40%", left: "65%", animation: "geo-spin 12s linear 0s infinite" }} width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <rect x="2" y="2" width="36" height="36" stroke="rgba(45,46,56,0.1)" strokeWidth="1.5"/>
-            </svg>
+            {/* Yellow dot */}
+            <span style={{ position: "absolute", top: "55%", left: "68%", width: 10, height: 10, borderRadius: "50%", background: "#f5c842", opacity: 0.7, animation: "dot-float 6s ease-in-out 1.4s infinite" }}/>
 
-            {/* Plus / cross */}
-            <svg style={{ position: "absolute", top: "58%", left: "78%", animation: "geo-float 8s ease-in-out 0.5s infinite" }} width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <line x1="12" y1="0" x2="12" y2="24" stroke="rgba(45,46,56,0.18)" strokeWidth="1.5"/>
-              <line x1="0" y1="12" x2="24" y2="12" stroke="rgba(45,46,56,0.18)" strokeWidth="1.5"/>
-            </svg>
+            {/* Coral dot — small */}
+            <span style={{ position: "absolute", top: "70%", left: "85%", width: 18, height: 18, borderRadius: "50%", background: "#fa9173", opacity: 0.5, animation: "dot-float 8s ease-in-out 0.4s infinite" }}/>
 
-            {/* Triangle outline */}
-            <svg style={{ position: "absolute", top: "72%", left: "60%", animation: "geo-float 6.5s ease-in-out 1.8s infinite" }} width="48" height="42" viewBox="0 0 48 42" fill="none">
-              <path d="M24 2L46 40H2L24 2Z" stroke="rgba(45,46,56,0.1)" strokeWidth="1.5"/>
-            </svg>
+            {/* Blue dot */}
+            <span style={{ position: "absolute", top: "22%", left: "88%", width: 12, height: 12, borderRadius: "50%", background: "#4db8ff", opacity: 0.55, animation: "dot-float 6.5s ease-in-out 2s infinite" }}/>
 
-            {/* Dot grid — 3×3 */}
-            <svg style={{ position: "absolute", top: "30%", left: "85%", animation: "geo-float 9s ease-in-out 2s infinite" }} width="40" height="40" viewBox="0 0 40 40" fill="none">
-              {[0,1,2].map(row => [0,1,2].map(col => (
-                <circle key={`${row}-${col}`} cx={6 + col * 14} cy={6 + row * 14} r="2" fill="rgba(45,46,56,0.15)"/>
-              )))}
-            </svg>
-
-            {/* Arc / half-circle */}
-            <svg style={{ position: "absolute", top: "85%", left: "72%", animation: "geo-float 7.5s ease-in-out 0.8s infinite" }} width="52" height="28" viewBox="0 0 52 28" fill="none">
-              <path d="M2 26 A24 24 0 0 1 50 26" stroke="#fa9173" strokeWidth="1.5" opacity="0.35"/>
-            </svg>
+            {/* Green dot */}
+            <span style={{ position: "absolute", top: "82%", left: "72%", width: 8, height: 8, borderRadius: "50%", background: "#5ecb8d", opacity: 0.65, animation: "dot-float 9s ease-in-out 1s infinite" }}/>
 
           </div>
 
           <style>{`
-            @keyframes geo-float {
-              0%, 100% { transform: translateY(0px) rotate(0deg); }
-              50% { transform: translateY(-12px) rotate(3deg); }
-            }
-            @keyframes geo-spin {
-              from { transform: rotate(0deg); }
-              to { transform: rotate(360deg); }
+            @keyframes dot-float {
+              0%, 100% { transform: translateY(0px); }
+              50% { transform: translateY(-14px); }
             }
           `}</style>
         </div>
