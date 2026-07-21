@@ -97,7 +97,7 @@ export default function ServicesSection() {
               >
                 <h3
                   style={{
-                    fontSize: "clamp(22px, 2.8vw, 48px)",
+                    fontSize: "clamp(19px, 2.4vw, 41px)",
                     fontFamily: "var(--font-geist-sans), 'Geist', system-ui, sans-serif",
                     fontWeight: 700,
                     color: open === i ? "#fffef9" : "rgba(255,254,249,0.85)",
