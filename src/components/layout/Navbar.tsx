@@ -164,7 +164,7 @@ export default function Navbar() {
                   animation: "dropdown-in 0.35s cubic-bezier(0.22,1,0.36,1) both",
                 }}
               >
-                <div className="grid grid-cols-4 gap-12">
+                <div className="grid grid-cols-5 gap-8">
                   {Object.entries(services).map(([vertical, data]) => (
                     <div key={vertical}>
                       <Link
