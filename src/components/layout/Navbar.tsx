@@ -152,6 +152,7 @@ export default function Navbar() {
                   top: scrolled ? "68px" : "88px",
                   background: "#fffef9",
                   borderBottom: "1px solid rgba(45,46,56,0.08)",
+                  animation: "dropdown-in 0.35s cubic-bezier(0.22,1,0.36,1) both",
                 }}
               >
                 <div className="grid grid-cols-4 gap-12">
