@@ -33,6 +33,7 @@ const services = [
 
 export default function ServicesSection() {
   const [open, setOpen] = useState<number | null>(null);
+  const [hovered, setHovered] = useState<number | null>(null);
 
   return (
     <section style={{ background: "#fffef9" }}>
@@ -106,10 +107,23 @@ export default function ServicesSection() {
           style={{ paddingTop: "0" }}
         >
           {services.map((s, i) => (
-            <div key={s.title} style={{ borderBottom: "1px solid rgba(45,46,56,0.08)" }}>
+            <div
+              key={s.title}
+              style={{
+                borderBottom: "1px solid rgba(45,46,56,0.08)",
+                background: hovered === i && open !== i ? "rgba(45,46,56,0.025)" : "transparent",
+                transition: "background 200ms ease",
+                marginLeft: "-20px",
+                marginRight: "-20px",
+                paddingLeft: "20px",
+                paddingRight: "20px",
+              }}
+            >
               <button
                 onClick={() => setOpen(open === i ? null : i)}
-                className="w-full flex items-center justify-between text-left group"
+                onMouseEnter={() => setHovered(i)}
+                onMouseLeave={() => setHovered(null)}
+                className="w-full flex items-center justify-between text-left"
                 style={{ padding: "28px 0" }}
               >
                 <h3
@@ -117,12 +131,11 @@ export default function ServicesSection() {
                     fontSize: "clamp(22px, 2.4vw, 41px)",
                     fontFamily: "var(--font-geist-sans), 'Geist', system-ui, sans-serif",
                     fontWeight: 700,
-                    color: open === i ? "#2d2e38" : "rgba(45,46,56,0.85)",
+                    color: open === i ? "#2d2e38" : hovered === i ? "#fa9173" : "rgba(45,46,56,0.85)",
                     lineHeight: 1.05,
                     letterSpacing: "-0.02em",
                     transition: "color 200ms ease",
                   }}
-                  className="group-hover:text-[#2d2e38]"
                 >
                   {s.title}
                 </h3>
@@ -133,14 +146,15 @@ export default function ServicesSection() {
                     width: "40px",
                     height: "40px",
                     borderRadius: "50%",
-                    border: `1px solid ${open === i ? "rgba(45,46,56,0.4)" : "rgba(45,46,56,0.15)"}`,
+                    border: `1px solid ${open === i ? "rgba(45,46,56,0.4)" : hovered === i ? "#fa9173" : "rgba(45,46,56,0.15)"}`,
+                    background: open === i ? "#2d2e38" : hovered === i ? "#fa9173" : "transparent",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    color: open === i ? "#2d2e38" : "rgba(45,46,56,0.35)",
+                    color: open === i || hovered === i ? "#fffef9" : "rgba(45,46,56,0.35)",
                     fontSize: "16px",
                     transform: open === i ? "rotate(180deg)" : "rotate(0deg)",
-                    transition: "transform 350ms cubic-bezier(0.22,1,0.36,1), border-color 200ms, color 200ms",
+                    transition: "transform 350ms cubic-bezier(0.22,1,0.36,1), border-color 200ms, color 200ms, background 200ms",
                   }}
                 >
                   ↓
