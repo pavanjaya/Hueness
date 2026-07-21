@@ -94,7 +94,7 @@ export default function Navbar() {
       style={{
         background: scrolled || servicesOpen ? "rgba(255,254,249,0.94)" : "transparent",
         backdropFilter: scrolled || servicesOpen ? "blur(12px)" : "none",
-        boxShadow: scrolled ? "0 1px 0 rgba(45,46,56,0.08)" : "none",
+        boxShadow: "none",
         transition: "background 300ms ease, box-shadow 300ms ease, backdrop-filter 300ms ease",
         animation: "nav-slide-down 0.6s cubic-bezier(0.22,1,0.36,1) 0.15s both",
       }}
@@ -102,7 +102,7 @@ export default function Navbar() {
       <nav
         className="px-8 md:px-14 xl:px-20 flex items-center"
         style={{
-          height: scrolled ? "56px" : "72px",
+          height: scrolled ? "68px" : "88px",
           transition: "height 300ms ease",
         }}
       >
