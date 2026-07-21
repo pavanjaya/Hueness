@@ -130,14 +130,17 @@ export default function Navbar() {
               <>
                 {/* Backdrop shim */}
                 <div
-                  className="fixed inset-0 z-40"
-                  style={{
-                    top: scrolled ? "68px" : "88px",
-                    background: "rgba(0,0,0,0.45)",
-                    backdropFilter: "blur(2px)",
-                    animation: "fade-up 0.2s ease both",
-                  }}
                   onClick={() => setServicesOpen(false)}
+                  style={{
+                    position: "fixed",
+                    top: scrolled ? "68px" : "88px",
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    background: "rgba(0,0,0,0.5)",
+                    zIndex: 40,
+                    animation: "page-in 0.2s ease both",
+                  }}
                 />
               <div
                 onMouseLeave={() => setServicesOpen(false)}
