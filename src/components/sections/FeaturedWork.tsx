@@ -19,7 +19,7 @@ const row2 = [
 type Project = { title: string; desc: string; image: string; bg: string; size: string; cta?: boolean };
 
 function Card({ p, imgHeight }: { p: Project; imgHeight: number }) {
-  const radius = 14;
+  const radius = 0;
   const inner = (
     <>
       {/* Image box */}
