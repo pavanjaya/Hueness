@@ -40,7 +40,7 @@ function Card({ p, imgHeight }: { p: Project; imgHeight: number }) {
       </div>
       {/* Text below */}
       <div className="pt-4">
-        <p className="font-bold text-[#2d2e38] leading-snug" style={{ fontSize: p.size === "large" ? "clamp(16px, 1.4vw, 20px)" : "clamp(14px, 1.2vw, 17px)", fontFamily: "var(--font-geist-sans)" }}>
+        <p className="font-normal text-[#2d2e38] leading-snug" style={{ fontSize: p.size === "large" ? "clamp(20px, 1.8vw, 26px)" : "clamp(16px, 1.4vw, 20px)", fontFamily: "var(--font-geist-sans)" }}>
           {p.title}
         </p>
         <p className="text-[rgba(45,46,56,0.5)] mt-1" style={{ fontSize: "clamp(11px, 0.9vw, 13px)", fontFamily: "var(--font-geist-sans)" }}>
@@ -79,14 +79,14 @@ export default function FeaturedWork() {
         {/* Row 1: 2 tall + 2 small */}
         <div style={{ display: "flex", gap: GAP, alignItems: "flex-start" }}>
           {row1.map((p) => (
-            <Card key={p.title} p={p} imgHeight={p.size === "large" ? 380 : 210} />
+            <Card key={p.title} p={p} imgHeight={p.size === "large" ? 520 : 280} />
           ))}
         </div>
 
         {/* Row 2: 1 tall + 1 small + 1 wide */}
         <div style={{ display: "flex", gap: GAP, alignItems: "flex-start" }}>
           {row2.map((p) => (
-            <Card key={p.title} p={p} imgHeight={p.size === "large" ? 380 : p.size === "wide" ? 380 : 210} />
+            <Card key={p.title} p={p} imgHeight={p.size === "large" ? 520 : p.size === "wide" ? 520 : 280} />
           ))}
         </div>
 
