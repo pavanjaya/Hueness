@@ -51,34 +51,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Bottom strip */}
-      <div
-        className="flex flex-col md:flex-row md:items-end justify-between gap-6 pt-8 mt-6 opacity-0"
-        style={{
-          borderTop: "1px solid rgba(45,46,56,0.12)",
-          animation: "page-in 0.8s cubic-bezier(0.16,1,0.3,1) 0.8s both",
-        }}
-      >
-        <p className="text-sm text-[rgba(45,46,56,0.5)] max-w-xs leading-relaxed" style={{ fontFamily: "var(--font-serif), 'IBM Plex Serif', Georgia, serif", fontStyle: "italic" }}>
-          An integrated design & technology studio — brand, engineering, and marketing in one place.
-        </p>
-
-        <div className="flex items-center gap-4 shrink-0">
-          <Link
-            href="/work"
-            className="text-sm font-medium text-[rgba(45,46,56,0.55)] hover:text-[#2d2e38] transition-colors"
-          >
-            View work
-          </Link>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 bg-[#fa9173] text-[#fffef9] text-sm font-semibold px-7 py-3.5 hover:opacity-90 transition-opacity"
-            style={{ borderRadius: "50px" }}
-          >
-            Start a project
-          </Link>
-        </div>
-      </div>
     </section>
   );
 }
