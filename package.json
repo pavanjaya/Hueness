@@ -13,6 +13,7 @@
     "@sanity/image-url": "^2.1.1",
     "@studio-freight/lenis": "^1.0.42",
     "framer-motion": "^12.42.0",
+    "geist": "^1.7.2",
     "lucide-react": "^1.21.0",
     "next": "16.2.9",
     "next-sanity": "^13.1.1",

@@ -1,16 +1,10 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Serif, Barlow_Condensed } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
+import { Barlow_Condensed } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import CustomCursor from "@/components/ui/CustomCursor";
-
-const ibmPlexSerif = IBM_Plex_Serif({
-  variable: "--font-serif",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  style: ["normal", "italic"],
-});
 
 const barlowCondensed = Barlow_Condensed({
   variable: "--font-display",
@@ -43,9 +37,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${ibmPlexSerif.variable} ${barlowCondensed.variable}`}>
+    <html lang="en" className={`${GeistSans.variable} ${barlowCondensed.variable}`}>
       <body className="min-h-screen flex flex-col" style={{ background: "#fffef9" }}>
-        {/* Custom cursor elements */}
         <div id="cursor-dot" />
         <div id="cursor-ring" />
         <CustomCursor />
