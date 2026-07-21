@@ -129,28 +129,42 @@ export default function Navbar() {
             {servicesOpen && (
               <div
                 onMouseLeave={() => setServicesOpen(false)}
-                className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[860px] border border-[rgba(45,46,56,0.1)] rounded-sm p-8 grid grid-cols-4 gap-8"
-              style={{ background: "#fffef9" }}
+                className="fixed left-0 right-0 px-8 md:px-14 xl:px-20 py-10"
+                style={{
+                  top: scrolled ? "68px" : "88px",
+                  background: "#fffef9",
+                  borderBottom: "1px solid rgba(45,46,56,0.08)",
+                }}
               >
-                {Object.entries(services).map(([vertical, data]) => (
-                  <div key={vertical}>
-                    <Link href={data.href} className="block text-xs font-bold uppercase tracking-widest text-[#2d2e38] mb-4">
-                      {vertical}
-                    </Link>
-                    <ul className="space-y-2.5">
-                      {data.items.map((item) => (
-                        <li key={`${vertical}-${item.label}`}>
-                          <Link href={item.href} className="text-sm text-[rgba(45,46,56,0.45)] hover:text-[#2d2e38] transition-colors leading-snug block">
-                            {item.label}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-                <div className="col-span-4 pt-6 mt-2 flex items-center justify-between" style={{ borderTop: "1px solid rgba(45,46,56,0.1)" }}>
+                <div className="grid grid-cols-4 gap-12">
+                  {Object.entries(services).map(([vertical, data]) => (
+                    <div key={vertical}>
+                      <Link
+                        href={data.href}
+                        className="block font-semibold text-[#2d2e38] hover:text-[#fa9173] transition-colors mb-5"
+                        style={{ fontSize: "clamp(18px, 1.6vw, 24px)", fontFamily: "var(--font-geist-sans)" }}
+                      >
+                        {vertical}
+                      </Link>
+                      <ul className="space-y-3">
+                        {data.items.map((item) => (
+                          <li key={`${vertical}-${item.label}`}>
+                            <Link
+                              href={item.href}
+                              className="text-[rgba(45,46,56,0.45)] hover:text-[#2d2e38] transition-colors block leading-snug"
+                              style={{ fontSize: "clamp(13px, 1vw, 15px)", fontFamily: "var(--font-geist-sans)" }}
+                            >
+                              {item.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+                <div className="flex items-center justify-between mt-8 pt-6" style={{ borderTop: "1px solid rgba(45,46,56,0.08)" }}>
                   <p className="text-xs text-[rgba(45,46,56,0.35)]">Not sure where to start?</p>
-                  <Link href="/contact" className="text-xs font-semibold text-[#2d2e38]">Talk to us →</Link>
+                  <Link href="/contact" className="text-xs font-semibold text-[#2d2e38] hover:text-[#fa9173] transition-colors">Talk to us →</Link>
                 </div>
               </div>
             )}
