@@ -97,7 +97,7 @@ export default function Navbar() {
       }`}
       style={scrolled || servicesOpen ? { background: "rgba(255,254,249,0.94)" } : {}}
     >
-      <nav className="px-6 xl:px-10 flex items-center h-20 md:h-[104px]">
+      <nav className="px-8 md:px-14 xl:px-20 flex items-center h-20 md:h-[104px]">
 
         {/* Logo — left */}
         <Link href="/" className="flex items-center shrink-0">

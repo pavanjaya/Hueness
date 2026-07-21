@@ -24,7 +24,7 @@ const steps = [
 export default function Process() {
   return (
     <section className="py-24 md:py-32 border-t border-[#e5e3de]">
-      <div className="px-6 xl:px-10">
+      <div className="px-8 md:px-14 xl:px-20">
 
         <RevealOnScroll>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-24">

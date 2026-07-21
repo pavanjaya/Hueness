@@ -17,7 +17,7 @@ const posts = [
 export default function BlogPage() {
   return (
     <div className="pt-20">
-      <div className="px-6 xl:px-10 py-20 md:py-28">
+      <div className="px-8 md:px-14 xl:px-20 py-20 md:py-28">
         <p className="text-xs font-semibold uppercase tracking-widest text-[#fa9173] mb-6">Hue Stream</p>
         <h1
           className="font-black uppercase text-[#2d2e38] tracking-tight leading-[0.88] max-w-3xl mb-8"
@@ -30,7 +30,7 @@ export default function BlogPage() {
         </p>
       </div>
 
-      <div className="px-6 xl:px-10 pb-24">
+      <div className="px-8 md:px-14 xl:px-20 pb-24">
         <div style={{ borderTop: "1px solid rgba(45,46,56,0.1)" }}>
           {posts.map((post, i) => (
             <article key={i} className="group py-8 flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer -mx-4 px-4 hover:bg-[#f0ddc7] transition-colors" style={{ borderBottom: "1px solid rgba(45,46,56,0.08)" }}>

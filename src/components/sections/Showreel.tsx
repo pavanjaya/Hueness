@@ -8,7 +8,7 @@ export default function Showreel() {
 
   return (
     <>
-      <section className="px-6 xl:px-10 pb-6">
+      <section className="px-8 md:px-14 xl:px-20 pb-6">
         <div
           className="relative w-full overflow-hidden cursor-pointer group"
           style={{ aspectRatio: "16/7" }}

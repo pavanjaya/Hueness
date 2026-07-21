@@ -29,7 +29,7 @@ const dim = "rgba(45,46,56,0.25)";
 export default function Footer() {
   return (
     <footer style={{ background: "#fffef9", borderTop: "1px solid rgba(45,46,56,0.1)" }}>
-      <div className="px-6 xl:px-10 py-16 md:py-24">
+      <div className="px-8 md:px-14 xl:px-20 py-16 md:py-24">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
           <div className="lg:col-span-2">
             <Link href="/" className="inline-flex">

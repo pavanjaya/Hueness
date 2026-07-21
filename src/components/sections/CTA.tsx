@@ -4,7 +4,7 @@ import RevealOnScroll from "@/components/ui/RevealOnScroll";
 export default function CTA() {
   return (
     <section
-      className="px-6 xl:px-10 py-28 md:py-48"
+      className="px-8 md:px-14 xl:px-20 py-28 md:py-48"
       style={{ background: "#323462" }}
     >
       <RevealOnScroll>

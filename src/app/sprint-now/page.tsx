@@ -26,7 +26,7 @@ export default function SprintNowPage() {
   return (
     <>
       {/* Hero */}
-      <section className="min-h-[70vh] flex flex-col justify-end pb-20 pt-40 px-6 xl:px-10" style={{ borderBottom: "1px solid rgba(45,46,56,0.1)" }}>
+      <section className="min-h-[70vh] flex flex-col justify-end pb-20 pt-40 px-8 md:px-14 xl:px-20" style={{ borderBottom: "1px solid rgba(45,46,56,0.1)" }}>
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#fa9173] mb-6 flex items-center gap-3">
           <span className="w-5 h-px bg-[#fa9173]" />
           Signature Offering by Hueness
@@ -75,7 +75,7 @@ export default function SprintNowPage() {
       </section>
 
       {/* Sprint phases */}
-      <section className="py-24 md:py-32 px-6 xl:px-10" style={{ borderBottom: "1px solid rgba(45,46,56,0.1)" }}>
+      <section className="py-24 md:py-32 px-8 md:px-14 xl:px-20" style={{ borderBottom: "1px solid rgba(45,46,56,0.1)" }}>
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[rgba(45,46,56,0.4)] mb-5 flex items-center gap-3">
           <span className="w-5 h-px bg-[rgba(45,46,56,0.3)]" />
           The Process
@@ -103,7 +103,7 @@ export default function SprintNowPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 md:py-32 px-6 xl:px-10 text-center" style={{ background: "#323462" }}>
+      <section className="py-24 md:py-32 px-8 md:px-14 xl:px-20 text-center" style={{ background: "#323462" }}>
         <p className="text-xs font-semibold uppercase tracking-[0.2em] mb-6" style={{ color: "rgba(255,239,214,0.45)" }}>Ready to sprint?</p>
         <h2
           className="font-black uppercase text-[#ffefd6] tracking-tight mb-8"

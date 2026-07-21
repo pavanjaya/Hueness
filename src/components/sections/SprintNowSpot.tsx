@@ -17,7 +17,7 @@ export default function SprintNowSpot() {
         style={{ backgroundImage: "radial-gradient(ellipse at 80% 50%, #000000 0%, transparent 55%)" }}
       />
 
-      <div className="px-6 xl:px-10 relative z-10">
+      <div className="px-8 md:px-14 xl:px-20 relative z-10">
         <RevealOnScroll>
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#000000] mb-5 flex items-center gap-3">
             

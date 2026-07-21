@@ -40,7 +40,7 @@ const products = [
 export default function InHouseProducts() {
   return (
     <section className="py-24 md:py-32">
-      <div className="px-6 xl:px-10">
+      <div className="px-8 md:px-14 xl:px-20">
         <div className="mb-16">
           <p className="text-xs font-semibold uppercase tracking-widest text-[#6b6b6b] mb-4">Hueness Labs</p>
           <h2 className="text-4xl md:text-6xl font-bold text-[#000000] tracking-tight leading-[0.95] max-w-3xl">

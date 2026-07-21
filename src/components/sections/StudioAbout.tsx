@@ -26,7 +26,7 @@ const services = [
 
 export default function StudioAbout() {
   return (
-    <section className="border-t border-[#e5e3de] py-24 md:py-36 px-6 xl:px-10">
+    <section className="border-t border-[#e5e3de] py-24 md:py-36 px-8 md:px-14 xl:px-20">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-32">
 
         {/* Left */}

@@ -52,7 +52,7 @@ const products = [
 export default function ProductsPage() {
   return (
     <div className="pt-20">
-      <div className="px-6 xl:px-10 py-20 md:py-28">
+      <div className="px-8 md:px-14 xl:px-20 py-20 md:py-28">
         <p className="text-xs font-semibold uppercase tracking-widest text-[#fa9173] mb-6">In The Lab</p>
         <h1
           className="font-black uppercase text-[#2d2e38] tracking-tight leading-[0.88] max-w-4xl mb-8"
@@ -65,7 +65,7 @@ export default function ProductsPage() {
         </p>
       </div>
 
-      <div className="px-6 xl:px-10 pb-24 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="px-8 md:px-14 xl:px-20 pb-24 grid grid-cols-1 md:grid-cols-2 gap-4">
         {products.map((p) => (
           <Link
             key={p.slug}

@@ -10,7 +10,7 @@ const stats = [
 export default function StudioStatement() {
   return (
     <section
-      className="px-6 xl:px-10 py-28 md:py-40"
+      className="px-8 md:px-14 xl:px-20 py-28 md:py-40"
       style={{ borderTop: "1px solid rgba(45,46,56,0.1)" }}
     >
       {/* Statement */}

@@ -48,7 +48,7 @@ export default function DesignPage() {
   return (
     <div className="pt-20">
       {/* Hero */}
-      <div className="px-6 xl:px-10 py-20 md:py-28">
+      <div className="px-8 md:px-14 xl:px-20 py-20 md:py-28">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
           <div>
             <p className="text-xs font-semibold uppercase tracking-widest text-[#fa9173] mb-6">Design</p>
@@ -68,7 +68,7 @@ export default function DesignPage() {
       </div>
 
       {/* Services */}
-      <div className="px-6 xl:px-10">
+      <div className="px-8 md:px-14 xl:px-20">
         {services.map((s, i) => (
           <div
             key={s.number}

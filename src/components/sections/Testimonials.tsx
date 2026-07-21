@@ -37,7 +37,7 @@ export default function Testimonials() {
   const t = testimonials[active];
 
   return (
-    <section className="bg-[#F6E6F1] py-24 md:py-36 px-6 xl:px-10">
+    <section className="bg-[#F6E6F1] py-24 md:py-36 px-8 md:px-14 xl:px-20">
       <div className="max-w-5xl">
         <div className="text-[120px] leading-none font-bold text-[#e8c8e0] select-none mb-4">&ldquo;</div>
 

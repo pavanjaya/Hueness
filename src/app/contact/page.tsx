@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div className="pt-20">
-      <div className="px-6 xl:px-10 py-20 md:py-28 grid grid-cols-1 lg:grid-cols-2 gap-16">
+      <div className="px-8 md:px-14 xl:px-20 py-20 md:py-28 grid grid-cols-1 lg:grid-cols-2 gap-16">
         {/* Left */}
         <div>
           <p className="text-xs font-semibold uppercase tracking-widest text-[#fa9173] mb-6">Get In Touch</p>

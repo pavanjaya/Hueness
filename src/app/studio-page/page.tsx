@@ -34,7 +34,7 @@ export default function StudioPage() {
   return (
     <div className="pt-20">
       {/* Hero */}
-      <div className="px-6 xl:px-10 py-20 md:py-28">
+      <div className="px-8 md:px-14 xl:px-20 py-20 md:py-28">
         <p className="text-xs font-semibold uppercase tracking-widest text-[#fa9173] mb-6">About Hueness</p>
         <h1
           className="font-black uppercase text-[#2d2e38] tracking-tight leading-[0.88] max-w-4xl mb-8"
@@ -49,7 +49,7 @@ export default function StudioPage() {
 
       {/* Philosophy — purple section */}
       <div className="py-24" style={{ background: "#323462" }}>
-        <div className="px-6 xl:px-10">
+        <div className="px-8 md:px-14 xl:px-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-xs font-semibold uppercase tracking-widest text-[#fa9173] mb-4">Hue Spot</p>
@@ -80,7 +80,7 @@ export default function StudioPage() {
       </div>
 
       {/* Approach */}
-      <div className="px-6 xl:px-10 py-24">
+      <div className="px-8 md:px-14 xl:px-20 py-24">
         <p className="text-xs font-semibold uppercase tracking-widest text-[#fa9173] mb-4">Our Approach</p>
         <h2
           className="font-black uppercase text-[#2d2e38] tracking-tight mb-12"
@@ -114,7 +114,7 @@ export default function StudioPage() {
 
       {/* Team */}
       <div className="py-24" style={{ background: "#ffefd6" }}>
-        <div className="px-6 xl:px-10">
+        <div className="px-8 md:px-14 xl:px-20">
           <p className="text-xs font-semibold uppercase tracking-widest text-[#fa9173] mb-4">Hue Team</p>
           <h2
             className="font-black uppercase text-[#2d2e38] tracking-tight mb-12"
@@ -142,7 +142,7 @@ export default function StudioPage() {
       </div>
 
       {/* Locations */}
-      <div className="px-6 xl:px-10 py-24">
+      <div className="px-8 md:px-14 xl:px-20 py-24">
         <p className="text-xs font-semibold uppercase tracking-widest text-[#fa9173] mb-4">Find Us</p>
         <h2
           className="font-black uppercase text-[#2d2e38] tracking-tight mb-12"

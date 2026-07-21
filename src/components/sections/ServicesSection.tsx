@@ -46,7 +46,7 @@ export default function ServicesSection() {
     <section className="border-t border-[#e5e3de]">
       {services.map((s, i) => (
         <RevealOnScroll key={s.num}>
-          <div className="border-b border-[#e5e3de] px-6 xl:px-10 py-16 md:py-20">
+          <div className="border-b border-[#e5e3de] px-8 md:px-14 xl:px-20 py-16 md:py-20">
             <div className="grid grid-cols-1 md:grid-cols-[160px_1fr] gap-10 md:gap-16">
 
               {/* Left — number + CTA */}

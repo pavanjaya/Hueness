@@ -54,7 +54,7 @@ const projects = [
 
 export default function FeaturedWork() {
   return (
-    <section className="px-6 xl:px-10 pt-24 pb-32" style={{ borderTop: "1px solid rgba(45,46,56,0.1)" }}>
+    <section className="px-8 md:px-14 xl:px-20 pt-24 pb-32" style={{ borderTop: "1px solid rgba(45,46,56,0.1)" }}>
 
       {/* Header */}
       <div className="flex items-center justify-between mb-16">
