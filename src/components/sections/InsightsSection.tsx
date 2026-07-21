@@ -63,8 +63,8 @@ export default function InsightsSection() {
               </div>
               {/* Title */}
               <p
-                className="text-[#2d2e38] leading-[1.05] mb-4 group-hover:text-[#fa9173] transition-colors duration-300 uppercase tracking-tight font-black"
-                style={{ fontSize: "clamp(22px, 2.2vw, 32px)", fontFamily: "var(--font-display), 'Barlow Condensed', Arial, sans-serif" }}
+                className="text-[#2d2e38] leading-snug mb-4 group-hover:text-[#fa9173] transition-colors duration-300 font-bold"
+                style={{ fontSize: "clamp(16px, 1.4vw, 20px)", fontFamily: "var(--font-geist-sans), 'Geist', system-ui, sans-serif" }}
               >
                 {post.title}
               </p>
