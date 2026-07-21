@@ -10,8 +10,8 @@ export default function Hero() {
       {/* Headline — smaller, tight above the video */}
       <div className="mb-5">
         <h1
-          className="font-display font-black uppercase leading-[0.88] tracking-tight text-[#2d2e38]"
-          style={{ fontSize: "clamp(40px, 5.5vw, 88px)", fontFamily: "var(--font-display), 'Barlow Condensed', Arial, sans-serif" }}
+          className="font-black uppercase leading-[0.88] tracking-tight text-[#2d2e38]"
+          style={{ fontSize: "clamp(40px, 5.5vw, 88px)", fontFamily: "var(--font-geist-sans), 'Geist', system-ui, sans-serif" }}
         >
           {["From strategy", "to scale, we help", "businesses build", "exceptional", "brands & products."].map((line, i) => (
             <span key={i} className="reveal-line-outer">
