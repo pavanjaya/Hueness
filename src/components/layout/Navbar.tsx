@@ -127,9 +127,21 @@ export default function Navbar() {
             </button>
 
             {servicesOpen && (
+              <>
+                {/* Backdrop shim */}
+                <div
+                  className="fixed inset-0 z-40"
+                  style={{
+                    top: scrolled ? "68px" : "88px",
+                    background: "rgba(0,0,0,0.45)",
+                    backdropFilter: "blur(2px)",
+                    animation: "fade-up 0.2s ease both",
+                  }}
+                  onClick={() => setServicesOpen(false)}
+                />
               <div
                 onMouseLeave={() => setServicesOpen(false)}
-                className="fixed left-0 right-0 px-8 md:px-14 xl:px-20 py-10"
+                className="fixed left-0 right-0 px-8 md:px-14 xl:px-20 py-10 z-50"
                 style={{
                   top: scrolled ? "68px" : "88px",
                   background: "#fffef9",
@@ -167,6 +179,7 @@ export default function Navbar() {
                   <Link href="/contact" className="text-xs font-semibold text-[#2d2e38] hover:text-[#fa9173] transition-colors">Talk to us →</Link>
                 </div>
               </div>
+              </>
             )}
           </li>
 
