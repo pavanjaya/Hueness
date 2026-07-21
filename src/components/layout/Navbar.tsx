@@ -55,7 +55,6 @@ const navLinks: { label: string; href: string }[] = [
   { label: "Products", href: "/products" },
   { label: "Work", href: "/work" },
   { label: "About", href: "/studio-page" },
-  { label: "Insights", href: "/blog" },
 ];
 
 export default function Navbar() {
