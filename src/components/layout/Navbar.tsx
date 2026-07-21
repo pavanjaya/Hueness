@@ -90,14 +90,22 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled || servicesOpen
-          ? "backdrop-blur-sm"
-          : "bg-transparent"
-      }`}
-      style={scrolled || servicesOpen ? { background: "rgba(255,254,249,0.94)" } : {}}
+      className="fixed top-0 left-0 right-0 z-50"
+      style={{
+        background: scrolled || servicesOpen ? "rgba(255,254,249,0.94)" : "transparent",
+        backdropFilter: scrolled || servicesOpen ? "blur(12px)" : "none",
+        boxShadow: scrolled ? "0 1px 0 rgba(45,46,56,0.08)" : "none",
+        transition: "background 300ms ease, box-shadow 300ms ease, backdrop-filter 300ms ease",
+        animation: "nav-slide-down 0.6s cubic-bezier(0.22,1,0.36,1) 0.15s both",
+      }}
     >
-      <nav className="px-8 md:px-14 xl:px-20 flex items-center h-14 md:h-18">
+      <nav
+        className="px-8 md:px-14 xl:px-20 flex items-center"
+        style={{
+          height: scrolled ? "56px" : "72px",
+          transition: "height 300ms ease",
+        }}
+      >
 
         {/* Logo — left */}
         <Link href="/" className="flex items-center shrink-0">
@@ -164,7 +172,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center shrink-0">
           <Link
             href="/contact"
-            className="text-sm font-semibold text-[#fffef9] bg-[#fa9173] px-6 py-2.5 hover:opacity-90 transition-opacity"
+            className="btn text-sm font-semibold text-[#fffef9] bg-[#fa9173] px-6 py-2.5"
             style={{ borderRadius: "50px" }}
           >
             Let&apos;s Talk

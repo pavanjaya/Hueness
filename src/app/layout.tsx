@@ -5,6 +5,8 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import CustomCursor from "@/components/ui/CustomCursor";
+import SmoothScroll from "@/components/ui/SmoothScroll";
+import PageAnimations from "@/components/ui/PageAnimations";
 
 const barlowCondensed = Barlow_Condensed({
   variable: "--font-display",
@@ -42,6 +44,8 @@ export default function RootLayout({
         <div id="cursor-dot" />
         <div id="cursor-ring" />
         <CustomCursor />
+        <SmoothScroll />
+        <PageAnimations />
         <Navbar />
         <main className="flex-1 page-enter">{children}</main>
         <Footer />
