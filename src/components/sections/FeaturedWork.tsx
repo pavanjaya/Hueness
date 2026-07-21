@@ -1,9 +1,10 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 
 const projects = [
   {
-    num: "01",
+    num: "W / 01",
     title: "Rishaba Industries",
     type: "Brand Identity",
     year: "2024",
@@ -11,7 +12,7 @@ const projects = [
     bg: "#f0ddc7",
   },
   {
-    num: "02",
+    num: "W / 02",
     title: "Kinderlogica",
     type: "Brand Identity",
     year: "2024",
@@ -19,7 +20,7 @@ const projects = [
     bg: "#9ee2d2",
   },
   {
-    num: "03",
+    num: "W / 03",
     title: "Mustang",
     type: "Brand Identity",
     year: "2023",
@@ -27,7 +28,7 @@ const projects = [
     bg: "#ffefd6",
   },
   {
-    num: "04",
+    num: "W / 04",
     title: "Megasoft",
     type: "Brand & Web",
     year: "2024",
@@ -35,7 +36,7 @@ const projects = [
     bg: "#f0ddc7",
   },
   {
-    num: "05",
+    num: "W / 05",
     title: "Indu Memorial",
     type: "Brand Identity",
     year: "2023",
@@ -43,7 +44,7 @@ const projects = [
     bg: "#e4caca",
   },
   {
-    num: "06",
+    num: "W / 06",
     title: "Sarang Archibuild",
     type: "Brand Identity",
     year: "2023",
@@ -54,10 +55,10 @@ const projects = [
 
 export default function FeaturedWork() {
   return (
-    <section className="px-8 md:px-14 xl:px-20 pt-24 pb-32" style={{ borderTop: "1px solid rgba(45,46,56,0.1)" }}>
+    <section style={{ borderTop: "1px solid rgba(45,46,56,0.1)" }}>
 
       {/* Header */}
-      <div className="flex items-center justify-between mb-16">
+      <div className="flex items-center justify-between px-8 md:px-14 xl:px-20 pt-16 pb-8">
         <h2
           className="font-black uppercase tracking-wide text-[#2d2e38]"
           style={{ fontSize: "clamp(13px, 1.2vw, 15.6px)", letterSpacing: "0.2em", fontFamily: "var(--font-geist-sans), 'Geist', system-ui, sans-serif" }}
@@ -72,104 +73,66 @@ export default function FeaturedWork() {
         </Link>
       </div>
 
-      {/* Row 1: two projects side by side, 60/40 split */}
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-3 mb-3">
-        <Link href="/work" className="group md:col-span-3 block">
-          <div className="relative aspect-[4/3] overflow-hidden" style={{ background: projects[0].bg }}>
+      {/* Horizontal scroll track */}
+      <div
+        className="flex overflow-x-auto gap-1 pb-0"
+        style={{ scrollSnapType: "x mandatory", msOverflowStyle: "none", scrollbarWidth: "none" }}
+      >
+        {projects.map((p) => (
+          <Link
+            key={p.title}
+            href="/work"
+            className="group relative shrink-0 overflow-hidden"
+            style={{
+              width: "clamp(280px, 33vw, 520px)",
+              aspectRatio: "3/4",
+              background: p.bg,
+              scrollSnapAlign: "start",
+            }}
+          >
+            {/* Image */}
             <Image
-              src={projects[0].image}
-              alt={projects[0].title}
+              src={p.image}
+              alt={p.title}
               fill
-              className="object-cover img-scale"
-              sizes="(max-width:768px) 100vw, 60vw"
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
+              sizes="33vw"
             />
-          </div>
-          <div className="flex items-start justify-between pt-4">
-            <div>
-              <p className="text-[rgba(45,46,56,0.3)] text-xs mb-1">{projects[0].num}</p>
-              <p className="text-[#2d2e38] text-lg font-semibold" style={{ fontFamily: "var(--font-serif), 'IBM Plex Serif', Georgia, serif" }}>{projects[0].title}</p>
-            </div>
-            <span className="text-[rgba(45,46,56,0.4)] text-xs mt-1">{projects[0].type}</span>
-          </div>
-        </Link>
 
-        <Link href="/work" className="group md:col-span-2 block">
-          <div className="relative aspect-[4/3] overflow-hidden" style={{ background: projects[1].bg }}>
-            <Image
-              src={projects[1].image}
-              alt={projects[1].title}
-              fill
-              className="object-cover img-scale"
-              sizes="(max-width:768px) 100vw, 40vw"
-            />
-          </div>
-          <div className="flex items-start justify-between pt-4">
-            <div>
-              <p className="text-[rgba(45,46,56,0.3)] text-xs mb-1">{projects[1].num}</p>
-              <p className="text-[#2d2e38] text-lg font-semibold" style={{ fontFamily: "var(--font-serif), 'IBM Plex Serif', Georgia, serif" }}>{projects[1].title}</p>
-            </div>
-            <span className="text-[rgba(45,46,56,0.4)] text-xs mt-1">{projects[1].type}</span>
-          </div>
-        </Link>
-      </div>
-
-      {/* Row 2: three equal cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-3">
-        {projects.slice(2, 5).map((p) => (
-          <Link key={p.title} href="/work" className="group block">
-            <div className="relative aspect-[4/3] overflow-hidden" style={{ background: p.bg }}>
-              <Image
-                src={p.image}
-                alt={p.title}
-                fill
-                className="object-cover img-scale"
-                sizes="(max-width:768px) 100vw, 33vw"
-              />
-            </div>
-            <div className="flex items-start justify-between pt-4">
-              <div>
-                <p className="text-[rgba(45,46,56,0.3)] text-xs mb-1">{p.num}</p>
-                <p className="text-[#2d2e38] text-lg font-semibold" style={{ fontFamily: "var(--font-serif), 'IBM Plex Serif', Georgia, serif" }}>{p.title}</p>
-              </div>
-              <span className="text-[rgba(45,46,56,0.4)] text-xs mt-1">{p.type}</span>
+            {/* Overlay on hover */}
+            <div
+              className="absolute inset-0 flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              style={{ background: "linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 60%)" }}
+            >
+              <span className="text-[rgba(255,255,255,0.6)] text-[10px] font-bold uppercase tracking-[0.2em] mb-1">{p.num}</span>
+              <p className="text-white font-bold leading-tight" style={{ fontSize: "clamp(20px, 2vw, 28px)", fontFamily: "var(--font-geist-sans), 'Geist', system-ui, sans-serif" }}>
+                {p.title}
+              </p>
+              <span className="text-[rgba(255,255,255,0.55)] text-xs uppercase tracking-[0.15em] mt-1">{p.type}</span>
             </div>
           </Link>
         ))}
-      </div>
 
-      {/* Row 3: one wide + CTA card */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-        <Link href="/work" className="group block">
-          <div className="relative aspect-[16/9] overflow-hidden" style={{ background: projects[5].bg }}>
-            <Image
-              src={projects[5].image}
-              alt={projects[5].title}
-              fill
-              className="object-cover img-scale"
-              sizes="(max-width:768px) 100vw, 50vw"
-            />
-          </div>
-          <div className="flex items-start justify-between pt-4">
-            <div>
-              <p className="text-[rgba(45,46,56,0.3)] text-xs mb-1">{projects[5].num}</p>
-              <p className="text-[#2d2e38] text-lg font-semibold" style={{ fontFamily: "var(--font-serif), 'IBM Plex Serif', Georgia, serif" }}>{projects[5].title}</p>
-            </div>
-            <span className="text-[rgba(45,46,56,0.4)] text-xs mt-1">{projects[5].type}</span>
-          </div>
-        </Link>
         {/* CTA card */}
         <Link
           href="/work"
-          className="group flex items-center justify-center border border-[rgba(45,46,56,0.1)] hover:border-[rgba(45,46,56,0.3)] transition-colors aspect-[16/9]"
+          className="group relative shrink-0 overflow-hidden flex items-center justify-center"
+          style={{
+            width: "clamp(200px, 22vw, 340px)",
+            aspectRatio: "3/4",
+            background: "#f5f0e8",
+            scrollSnapAlign: "start",
+          }}
         >
-          <div className="text-center">
-            <p className="text-[rgba(45,46,56,0.35)] text-sm mb-3 group-hover:text-[rgba(45,46,56,0.6)] transition-colors">See all projects</p>
+          <div className="text-center px-8">
+            <p className="text-[rgba(45,46,56,0.35)] text-xs uppercase tracking-[0.2em] mb-4">See all projects</p>
             <p
-              className="font-display font-black uppercase text-[#2d2e38] group-hover:text-[#fa9173] transition-colors"
-              style={{ fontSize: "clamp(40px, 5vw, 72px)", fontFamily: "var(--font-display), 'Barlow Condensed', Arial, sans-serif" }}
+              className="font-black text-[#2d2e38] group-hover:text-[#fa9173] transition-colors leading-none"
+              style={{ fontSize: "clamp(48px, 6vw, 88px)", fontFamily: "var(--font-geist-sans), 'Geist', system-ui, sans-serif" }}
             >
-              50+ →
+              50+
             </p>
+            <p className="text-[#fa9173] text-2xl mt-2">→</p>
           </div>
         </Link>
       </div>
