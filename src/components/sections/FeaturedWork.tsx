@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-const GAP = 16;
+const GAP = 28;
 
 const row1 = [
   { title: "Rishaba Industries", desc: "Brand identity for an industrial manufacturing leader", image: "/projects/rishaba.png", bg: "#f0ddc7", size: "large" },
@@ -12,7 +12,7 @@ const row1 = [
 
 const row2 = [
   { title: "Justlog",           desc: "AI money tracker app — smart finance for modern life", image: "/projects/justlog.png", bg: "#0f0f0f", size: "large" },
-  { title: "Sarang Archibuild", desc: "Brand identity for a premium architecture firm", image: "/projects/sarang.png", bg: "#ffefd6", size: "small" },
+  { title: "Folklorez", desc: "Brand identity for a folk-inspired lifestyle & culture brand", image: "/projects/folklorez.png", bg: "#2d2e38", size: "small" },
   { title: "Bon Vivant",        desc: "Brand identity for a premium lifestyle & dining brand", image: "/projects/bon-vivant.png", bg: "#2d2e38", size: "wide" },
 ];
 
@@ -61,7 +61,7 @@ function Card({ p, imgHeight }: { p: Project; imgHeight: number }) {
 
 export default function FeaturedWork() {
   return (
-    <section style={{ borderTop: "1px solid rgba(45,46,56,0.1)" }}>
+    <section>
 
       {/* Header */}
       <div className="flex items-center justify-between px-8 md:px-14 xl:px-20 pt-16 pb-10">
@@ -71,8 +71,8 @@ export default function FeaturedWork() {
         >
           Selected Work
         </h2>
-        <Link href="/work" className="text-xs font-medium uppercase tracking-[0.2em] text-[rgba(45,46,56,0.4)] hover:text-[#2d2e38] transition-colors">
-          All projects →
+        <Link href="/work" className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#2d2e38] px-5 py-2.5 hover:bg-[rgba(45,46,56,0.08)] transition-colors" style={{ borderRadius: "50px", border: "1px solid rgba(45,46,56,0.18)" }}>
+          All Projects →
         </Link>
       </div>
 

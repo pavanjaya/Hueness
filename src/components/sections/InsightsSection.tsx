@@ -27,23 +27,23 @@ const posts = [
 
 export default function InsightsSection() {
   return (
-    <section className="px-8 md:px-14 xl:px-20 py-20 md:py-28">
+    <section className="px-8 md:px-14 xl:px-20 py-28 md:py-40">
 
       {/* Header row */}
       <RevealOnScroll>
         <div className="flex items-center justify-between mb-10">
           <h2
             className="font-black uppercase text-[#2d2e38] tracking-wider text-sm"
-            style={{ letterSpacing: "0.12em" }}
+            style={{ letterSpacing: "0.2em" }}
           >
-            Featured Insights
+            HueStream
           </h2>
           <Link
             href="/blog"
             className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#2d2e38] px-5 py-2.5 hover:bg-[rgba(45,46,56,0.08)] transition-colors"
             style={{ borderRadius: "50px", border: "1px solid rgba(45,46,56,0.18)" }}
           >
-            See All Insights
+            See All
           </Link>
         </div>
       </RevealOnScroll>

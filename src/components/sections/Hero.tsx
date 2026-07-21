@@ -29,10 +29,10 @@ export default function Hero() {
   return (
     <section
       className="flex flex-col px-8 md:px-14 xl:px-20 pb-10"
-      style={{ background: "#fffef9", paddingTop: "calc(var(--nav-h, 72px) + 5rem)" }}
+      style={{ background: "#fffef9", paddingTop: "calc(88px + 5rem)" }}
     >
       {/* Headline */}
-      <div className="mb-5">
+      <div className="mb-12">
         <h1
           className="font-black uppercase leading-[0.88] tracking-tight text-[#2d2e38]"
           style={{

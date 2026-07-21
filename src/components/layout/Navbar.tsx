@@ -10,55 +10,44 @@ import { Menu, X } from "lucide-react";
 const services = {
   Branding: {
     href: "/design",
-    items: [
-      { label: "Brand Identity", href: "/design" },
-      { label: "Visual Systems", href: "/design" },
-      { label: "Packaging Design", href: "/design" },
-      { label: "Brand Guidelines", href: "/design" },
-      { label: "Art Direction", href: "/design" },
-    ],
+    items: ["Brand Identity", "Visual Systems", "Packaging Design", "Brand Guidelines", "Art Direction"],
   },
   "Digital Experience": {
     href: "/design",
-    items: [
-      { label: "UX / UI Design", href: "/design" },
-      { label: "Web Design", href: "/design" },
-      { label: "Product Design", href: "/design" },
-      { label: "Design Systems", href: "/design" },
-      { label: "Motion Design", href: "/design" },
-    ],
+    items: ["UX / UI Design", "Web Design", "Product Design", "Design Systems", "Motion Design"],
   },
   Technology: {
     href: "/tech",
-    items: [
-      { label: "Web & Mobile Development", href: "/tech" },
-      { label: "SaaS Development", href: "/tech" },
-      { label: "AI Solutions", href: "/tech" },
-      { label: "Product Engineering", href: "/tech" },
-      { label: "API & Integrations", href: "/tech" },
-    ],
+    items: ["Web & Mobile Development", "SaaS Development", "AI Solutions", "Product Engineering", "API & Integrations"],
   },
   Products: {
     href: "/tech",
-    items: [
-      { label: "MVP Development", href: "/tech" },
-      { label: "Product Strategy", href: "/tech" },
-      { label: "Zero to One Builds", href: "/tech" },
-      { label: "SaaS Products", href: "/tech" },
-      { label: "AI-Powered Apps", href: "/tech" },
-    ],
+    items: ["MVP Development", "Product Strategy", "Zero to One Builds", "SaaS Products", "AI-Powered Apps"],
   },
   Marketing: {
     href: "/marketing",
-    items: [
-      { label: "Brand Marketing", href: "/marketing" },
-      { label: "Growth Marketing", href: "/marketing" },
-      { label: "Performance Marketing", href: "/marketing" },
-      { label: "Content Marketing", href: "/marketing" },
-      { label: "SEO & Analytics", href: "/marketing" },
-    ],
+    items: ["Brand Marketing", "Growth Marketing", "Performance Marketing", "Content Marketing", "SEO & Analytics"],
   },
 };
+
+function ServiceIcon({ name }: { name: string }) {
+  const s = { width: 33, height: 33, viewBox: "0 0 24 24", fill: "none" as const, stroke: "currentColor", strokeWidth: 1.5, strokeLinecap: "round" as const, strokeLinejoin: "round" as const };
+  if (name === "Branding") return (
+    <svg {...s}><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+  );
+  if (name === "Digital Experience") return (
+    <svg {...s}><rect x="2" y="3" width="20" height="14" rx="2" /><path d="M8 21h8M12 17v4" /></svg>
+  );
+  if (name === "Technology") return (
+    <svg {...s}><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></svg>
+  );
+  if (name === "Products") return (
+    <svg {...s}><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" /><polyline points="3.27 6.96 12 12.01 20.73 6.96" /><line x1="12" y1="22.08" x2="12" y2="12" /></svg>
+  );
+  return (
+    <svg {...s}><path d="M22 12h-4l-3 9L9 3l-3 9H2" /></svg>
+  );
+}
 
 const navLinks: { label: string; href: string }[] = [
   { label: "Programs", href: "/sprint-now" },
@@ -156,7 +145,7 @@ export default function Navbar() {
                 )}
               <div
                 onMouseLeave={() => setServicesOpen(false)}
-                className="fixed left-0 right-0 px-8 md:px-14 xl:px-20 py-10 z-50"
+                className="fixed left-0 right-0 px-8 md:px-14 xl:px-20 py-12 z-50"
                 style={{
                   top: scrolled ? "68px" : "88px",
                   background: "#fffef9",
@@ -167,30 +156,31 @@ export default function Navbar() {
                 <div className="grid grid-cols-5 gap-8">
                   {Object.entries(services).map(([vertical, data]) => (
                     <div key={vertical}>
+                      {/* Icon */}
+                      <div className="mb-3 text-[rgba(45,46,56,0.3)]"><ServiceIcon name={vertical} /></div>
                       <Link
                         href={data.href}
                         className="block font-semibold text-[#2d2e38] hover:text-[#fa9173] transition-colors mb-5"
-                        style={{ fontSize: "clamp(18px, 1.6vw, 24px)", fontFamily: "var(--font-geist-sans)" }}
+                        style={{ fontSize: "clamp(16px, 1.4vw, 20px)", fontFamily: "var(--font-geist-sans)" }}
                       >
                         {vertical}
                       </Link>
                       <ul className="space-y-3">
                         {data.items.map((item) => (
-                          <li key={`${vertical}-${item.label}`}>
-                            <Link
-                              href={item.href}
-                              className="text-[rgba(45,46,56,0.45)] hover:text-[#2d2e38] transition-colors block leading-snug"
-                              style={{ fontSize: "clamp(13px, 1vw, 15px)", fontFamily: "var(--font-geist-sans)" }}
+                          <li key={`${vertical}-${item}`}>
+                            <span
+                              className="text-[rgba(45,46,56,0.4)] block leading-snug"
+                              style={{ fontSize: "clamp(12px, 0.9vw, 14px)", fontFamily: "var(--font-geist-sans)" }}
                             >
-                              {item.label}
-                            </Link>
+                              {item}
+                            </span>
                           </li>
                         ))}
                       </ul>
                     </div>
                   ))}
                 </div>
-                <div className="flex items-center justify-between mt-8 pt-6" style={{ borderTop: "1px solid rgba(45,46,56,0.08)" }}>
+                <div className="flex items-center justify-center gap-4 mt-10 pt-8" style={{ borderTop: "1px solid rgba(45,46,56,0.08)" }}>
                   <p className="text-xs text-[rgba(45,46,56,0.35)]">Not sure where to start?</p>
                   <Link href="/contact" className="text-xs font-semibold text-[#2d2e38] hover:text-[#fa9173] transition-colors">Talk to us →</Link>
                 </div>
@@ -247,15 +237,15 @@ export default function Navbar() {
                 <div className="ml-4 mb-2 space-y-4">
                   {Object.entries(services).map(([vertical, data]) => (
                     <div key={vertical}>
-                      <Link href={data.href} className="block text-xs font-bold uppercase tracking-widest text-[#2d2e38] mb-2">
+                      <Link href={data.href} className="block text-xs font-bold uppercase tracking-widest text-[#ffefd6] mb-2">
                         {vertical}
                       </Link>
                       <ul className="space-y-1.5">
                         {data.items.map((item) => (
-                          <li key={`mob-${vertical}-${item.label}`}>
-                            <Link href={item.href} className="text-sm text-[rgba(45,46,56,0.45)] hover:text-[#2d2e38] transition-colors block py-0.5">
-                              {item.label}
-                            </Link>
+                          <li key={`mob-${vertical}-${item}`}>
+                            <span className="text-sm text-[rgba(255,239,214,0.45)] block py-0.5">
+                              {item}
+                            </span>
                           </li>
                         ))}
                       </ul>

@@ -54,11 +54,11 @@ export default function CTA() {
         >
           <p className="text-sm" style={{ color: "rgba(255,239,214,0.35)" }}>No commitment. Just a conversation.</p>
           <a
-            href="mailto:hello@hueness.com"
+            href="mailto:business@hueness.com"
             className="text-sm hover:text-[#ffefd6] transition-colors"
             style={{ color: "rgba(255,239,214,0.45)" }}
           >
-            hello@hueness.com
+            business@hueness.com
           </a>
         </div>
       </RevealOnScroll>
