@@ -4,14 +4,14 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <section
-      className="min-h-screen flex flex-col justify-between px-6 xl:px-10 pt-32 pb-10"
+      className="flex flex-col px-6 xl:px-10 pt-32 pb-10"
       style={{ background: "#fffef9" }}
     >
-      {/* Headline */}
-      <div className="flex-1 flex flex-col justify-center py-12">
+      {/* Headline — smaller, tight above the video */}
+      <div className="mb-5">
         <h1
-          className="font-display font-black uppercase leading-[0.88] tracking-tight text-[#2d2e38] max-w-[95vw]"
-          style={{ fontSize: "clamp(64px, 9.5vw, 148px)", fontFamily: "var(--font-display), 'Barlow Condensed', Arial, sans-serif" }}
+          className="font-display font-black uppercase leading-[0.88] tracking-tight text-[#2d2e38]"
+          style={{ fontSize: "clamp(40px, 5.5vw, 88px)", fontFamily: "var(--font-display), 'Barlow Condensed', Arial, sans-serif" }}
         >
           {["From strategy", "to scale, we help", "businesses build", "exceptional", "brands & products."].map((line, i) => (
             <span key={i} className="reveal-line-outer">
@@ -23,12 +23,40 @@ export default function Hero() {
         </h1>
       </div>
 
+      {/* Video placeholder */}
+      <div
+        className="w-full relative overflow-hidden opacity-0"
+        style={{
+          aspectRatio: "16/9",
+          background: "#0c0c0c",
+          borderRadius: "8px",
+          animation: "page-in 0.9s cubic-bezier(0.16,1,0.3,1) 0.55s both",
+        }}
+      >
+        {/* Play button */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <button
+            className="group flex items-center justify-center w-16 h-16 rounded-full transition-all duration-300 hover:scale-110"
+            style={{ background: "rgba(255,254,249,0.12)", border: "1px solid rgba(255,254,249,0.2)" }}
+            aria-label="Play showreel"
+          >
+            <svg width="18" height="20" viewBox="0 0 18 20" fill="none" className="ml-1">
+              <path d="M1 1L17 10L1 19V1Z" fill="#fffef9" />
+            </svg>
+          </button>
+        </div>
+        {/* Label */}
+        <div className="absolute bottom-5 left-6 flex items-center gap-3">
+          <span className="text-[rgba(255,254,249,0.35)] text-xs font-semibold uppercase tracking-[0.2em]">Showreel 2024</span>
+        </div>
+      </div>
+
       {/* Bottom strip */}
       <div
-        className="flex flex-col md:flex-row md:items-end justify-between gap-6 pt-8 opacity-0"
+        className="flex flex-col md:flex-row md:items-end justify-between gap-6 pt-8 mt-6 opacity-0"
         style={{
           borderTop: "1px solid rgba(45,46,56,0.12)",
-          animation: "page-in 0.8s cubic-bezier(0.16,1,0.3,1) 0.6s both",
+          animation: "page-in 0.8s cubic-bezier(0.16,1,0.3,1) 0.8s both",
         }}
       >
         <p className="text-sm text-[rgba(45,46,56,0.5)] max-w-xs leading-relaxed" style={{ fontFamily: "var(--font-serif), 'IBM Plex Serif', Georgia, serif", fontStyle: "italic" }}>
