@@ -11,7 +11,7 @@ const row1 = [
 ];
 
 const row2 = [
-  { title: "Playissm",          desc: "Brand identity for a next-gen play & entertainment brand", image: "/projects/playissm.png", bg: "#e4caca", size: "large" },
+  { title: "Justlog",           desc: "AI money tracker app — smart finance for modern life", image: "/projects/justlog.png", bg: "#0f0f0f", size: "large" },
   { title: "Sarang Archibuild", desc: "Brand identity for a premium architecture firm", image: "/projects/sarang.png", bg: "#ffefd6", size: "small" },
   { title: "Bon Vivant",        desc: "Brand identity for a premium lifestyle & dining brand", image: "/projects/bon-vivant.png", bg: "#2d2e38", size: "wide" },
 ];
