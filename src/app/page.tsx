@@ -10,8 +10,8 @@ export default function Home() {
     <>
       <Hero />
       <ClientStrip />
-      <FeaturedWork />
       <StudioStatement />
+      <FeaturedWork />
       <InsightsSection />
       <CTA />
     </>
