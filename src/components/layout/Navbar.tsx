@@ -52,7 +52,7 @@ const services = {
 
 const navLinks: { label: string; href: string }[] = [
   { label: "Programs", href: "/sprint-now" },
-  { label: "Products", href: "/products" },
+  { label: "HueMade", href: "/products" },
   { label: "Work", href: "/work" },
   { label: "About", href: "/studio-page" },
 ];
