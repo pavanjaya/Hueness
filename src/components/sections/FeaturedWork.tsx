@@ -85,9 +85,20 @@ export default function FeaturedWork() {
 
         {/* Row 2: 1 tall + 1 small + 1 wide */}
         <div style={{ display: "flex", gap: GAP, alignItems: "flex-start" }}>
-          {row2.map((p) => (
+          {row2.filter(p => !p.cta).map((p) => (
             <Card key={p.title} p={p} imgHeight={p.size === "large" ? 520 : p.size === "wide" ? 520 : 280} />
           ))}
+        </div>
+
+        {/* CTA pill */}
+        <div className="flex justify-center pt-4">
+          <Link
+            href="/work"
+            className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#2d2e38] px-8 py-4 hover:bg-[rgba(45,46,56,0.06)] transition-colors"
+            style={{ borderRadius: "50px", border: "1px solid rgba(45,46,56,0.18)" }}
+          >
+            See All Projects
+          </Link>
         </div>
 
       </div>
